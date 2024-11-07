@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProjekPKL - Fruit Delight</title>
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="icon" href="apple-touch-icon" type="image/x-icon">
+    <style>
+        body {
+            background-image: linear-gradient(to right, #FFFA66, #FF7F50); /* Lemon yellow to coral inspired by citrus fruits */
+            font-family: 'Trebuchet MS', sans-serif;
+            margin: 0;
+            overflow: hidden; /* Hide any overflow from bubble animations */
+            position: relative; /* Set relative positioning for bubble positioning */
+        }
+
+        /* Bubble effect using pseudo-elements */
+        body::before,
+        body::after {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: rgba(255, 165, 0, 0.3); /* Orange color bubble inspired by fruits like oranges and mangoes */
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+            z-index: 1;
+        }
+
+        body::before {
+            top: 25%;
+            left: 15%;
+            animation-duration: 8s;
+            background: rgba(144, 238, 144, 0.3); /* Light green bubble inspired by limes */
+        }
+
+        body::after {
+            top: 65%;
+            left: 75%;
+            animation-duration: 10s;
+            background: rgba(255, 182, 193, 0.3); /* Light pink bubble inspired by strawberries */
+        }
+
+        /* Bubble float animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0) scale(1);
+            }
+            50% {
+                transform: translateY(-20px) scale(1.1);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        aside {
+            background-color: #FF4500; /* Red-orange resembling the color of ripe fruit skins */
+            padding: 10px;
+            z-index: 2; /* Ensures content is above bubbles */
+            position: relative; /* Positioning content above floating bubbles */
+        }
+
+        nav a img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        nav a:hover img {
+            transform: scale(1.2); /* Enlarge the icons on hover */
+        }
+
+        h1 {
+            color: #32CD32; /* Lime green to match the theme of fresh fruits */
+            text-align: center;
+            font-size: 2.5em;
+            z-index: 2;
+            position: relative; /* Ensure text appears above bubbles */
+        }
+
+        form {
+            background-color: #FFF8DC; /* Cornsilk color to resemble a light, fresh fruit pulp */
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #FF6347; /* Tomato border color */
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            position: relative; /* Ensure form is above bubbles */
+        }
+
+        label, input[type="submit"], footer {
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        label {
+            color: #FF4500; /* Orange-red color to match the theme */
+            margin: 10px 0 5px 0;
+        }
+
+        input[type="email"], textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #FF4500;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #32CD32; /* Lime green color for a fresh look */
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #228B22; /* Darker green on hover */
+        }
+
+        footer {
+            background-color: #FF4500;
+            color: #FFF8DC; /* Light text color */
+            padding: 10px 0;
+            z-index: 2;
+            position: relative; /* Ensure footer is above bubbles */
+        }
+    </style>
+</head>
+
+<body>    <aside>
+        <nav>
+            <a href="Home1.html"><img src="rmh.jpeg" alt="Home"></a>|
+            <a href="Contactwe.html"><img src="pon.jpeg" alt="Contact Us"></a>|
+            <a href="Aboutwe.html"><img src="pil.jpg" alt="About Us"></a>|
+            <a href="kegiatan kami.html"><img src="Set.png" alt="Our Activities"></a>|
+            <a href="Barang².html"><img src="nj.jpg" alt="Products"></a>|
+              <a href="Cv.html"><img src="er.jpg" alt="Products"></a>
+        </nav>
+    </aside>
+   
+
+    <hr />
+
+    <div>
+        <h1>Contact Me</h1>
+        <form>
+            <label for="email">Email</label>
+            <input type="email" name="email" placeholder="Enter your email address" required />
+
+            <label for="message">Message</label>
+            <textarea name="message" placeholder="Write your message here..." rows="4" required></textarea>
+
+            <input type="submit" value="Send" />
+        </form>
+    </div>
+
+    <hr />
+
+    <footer>
+        <p>by &copy; byRaykin - Fruit Delight Theme</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projek PKL.com</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+       font-family:'Courier New', Courier, monospace;', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #fff;
+        }
+        .date {
+            font-size: 2em;
+            color: #FF6347; /* Warna teks */
+            background: linear-gradient(45deg, #FF6347, #FF69B4, #FFD700, #7FFFD4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: colorShift 3s infinite alternate;
+        }
+        @keyframes colorShift {
+            0% {
+                color: #FF6347;
+            }
+            25% {
+                color: #FF69B4;
+            }
+            50% {
+                color: #FFD700;
+            }
+            75% {
+                color: #7FFFD4;
+            }
+            100% {
+                color: #FF6347;
+            }
+        }
+      header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #444;
+        }
+        .clock {
+            font-size: 2em;
+            color: #fff;
+            text-shadow: 0 0 20px #f00, 0 0 40px #0f0, 0 0 60px #00f;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 20px #f00, 0 0 40px #f00, 0 0 60px #f00;
+            }
+            33% {
+                text-shadow: 0 0 20px #0f0, 0 0 40px #0f0, 0 0 60px #0f0;
+            }
+            66% {
+                text-shadow: 0 0 20px #00f, 0 0 40px #00f, 0 0 60px #00f;
+            }
+            100% {
+                text-shadow: 0 0 20px #ff0, 0 0 40px #ff0, 0 0 60px #ff0;
+            }
+        }
+            .menu-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f39c12; /* Fruit-inspired orange background */
+            border: 2px solid #e67e22; /* Darker orange border */
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background-color: #e74c3c; /* Tomato color */
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-icon div {
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+        .nav-menu {
+            display: none; /* Hidden by default */
+            background: url('https://example.com/fruit-pattern.jpg') no-repeat center; /* Background with fruit pattern */
+            background-size: cover;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            width: 200px;
+            z-index: 1;
+            border: 2px solid #e67e22;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            background-color: #e67e22; /* Orange color on hover */
+            color: white;
+        }
+
+        .menu-container.active .nav-menu {
+            display: block;
+        }
+
+        aside nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background-color: cyan;
+            padding: 10px;
+        }
+
+        aside nav a img {
+            width: 40px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .highlight-text {
+            color: red;
+            font-weight: bold;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f0f0f0, #e6e6e6); /* Light gradient background */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            background: linear-gradient(to right, red,yellow);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            background-color: #f3f3f3;
+        }
+
+        .search-box {
+            display: flex;
+            border: 2px solid red;
+            border-radius: 25px;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .search-box input[type="text"] {
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .search-box button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .search-box button:hover {
+            background-color: #3367d6;
+        }
+
+        
+
+        article {
+            text-align: center;
+            margin: 20px;
+        }
+
+        table {
+            background-color: #fff;
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        table th, table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        h1, h2, h4, p {
+            margin: 10px 0;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        h4 {
+            color: #555;
+        }
+
+        .highlight-text {
+            color: red;
+            font-weight: bold;
+        }
+                .slider {
+            width: 350px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            border: 2px solid #ccc;
+        }
+
+        /* Gambar di dalam slider */
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            animation: slide 10s infinite;
+        }
+
+        .slides img {
+            width: 500px; /* Harus sama dengan lebar slider */
+            height: 300px; /* Harus sama dengan tinggi slider */
+        }
+
+        /* Keyframes untuk animasi slide */
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-200%); }
+            100% { transform: translateX(0); }
+        }
+        
+    </style>
+</head>
+
+<body>
+   <header>
+                <h1> 😊Projek PKL 😊</h1>
+        <div class="clock" id="digital-clock">00:00:00</div>
+    </header>
+    <div class="date" id="date"></div>
+
+    <script>
+        const dateElement = document.getElementById('date');
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        const today = new Date().toLocaleDateString('id-ID', options);
+        dateElement.textContent = today;
+    </script>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('digital-clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); // Panggil sekali untuk menampilkan waktu segera
+    </script>
+        <aside>
+        <nav>
+            <a href="Home1.html"><img src="rmh.jpeg" alt="Home"></a>
+            <a href="Contactwe.html"><img src="pon.jpeg" alt="Contact Us"></a>
+            <a href="Aboutwe.html"><img src="pil.jpg" alt="About Us"></a>
+            <a href="kegiatan kami.html"><img src="Set.png" alt="Our Activities"></a>
+            <a href="Barang².html"><img src="nj.jpg" alt="Products"></a>
+              <a href="Cv.html"><img src="er.jpg" alt="Products"></a>
+        </nav>
+    </aside>
+    <div class="menu-container" id="menuContainer">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-menu">
+            <a href="J.html" style="color:#008080">Kesukaan Film</a>
+            <a href="Hu.html" style="color:yellow"> buah buahan🍓</a>
+            <a href="Contactwe.html" style="color:blue">Contact Us</a>
+            <a href="Aboutwe.html" style="color:blue">About Us</a>
+            <a href="kegiatan kami.html" style="color:blue">Our Activities</a>
+             <a href="Benua.html" style="color:blue">Benua Flora and Fauna🌏🦓🌵</a>
+            
+        </div>
+    </div>
+
+<div class="search-container">
+    <form class="search-box" action="https://www.google.com/search" method="GET" target="_blank">
+        <input type="text" name="q" placeholder="Search on Google...">
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<style>
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        background-color: #f3f3f3;
+    }
+
+    .search-box {
+        display: flex;
+        border: 3px solid transparent; /* Set border to transparent initially */
+        border-radius: 25px;
+        padding: 5px;
+        background: linear-gradient(white, white) padding-box, /* Inner white background */
+                    linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet) border-box; /* Gradient border */
+    }
+
+    .search-box input[type="text"] {
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 25px;
+        width: 200px;
+        background-color: #fff;
+    }
+
+    .search-box button {
+        background: linear-gradient(to right, red,gold); /* Gradient background for button */
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .search-box button:hover {
+        background: linear-gradient(to right, violet, blue, cyan, green, yellow, orange, red); /* Inverted gradient on hover */
+    }
+          .rounded-link {
+      display: inline-block;
+      text-align: center;
+      width: 200px; /* Sesuaikan ukuran */
+      text-decoration: none;
+      color: black;
+      font-family: Arial, sans-serif;
+    }
+
+    .rounded-link img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px; /* Membuat sudut melengkung */
+      display: block;
+      margin-bottom: 8px; /* Jarak antara gambar dan teks */
+    }
+            .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+            gap: 20px; /* Jarak antar gambar */
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Mengatur gaya untuk setiap gambar dan teks */
+        .gallery figure {
+            margin: 0;
+            text-align: center; /* Mengatur teks berada di tengah */
+        }
+
+        /* Mengatur ukuran gambar */
+        .gallery img {
+            width: 100%; /* Lebar gambar mengikuti lebar kolom */
+            height: 150px; /* Tinggi gambar */
+            object-fit: cover; /* Mengisi area gambar sambil menjaga proporsi */
+            border-radius: 5px; /* Membuat sudut gambar melengkung */
+        }
+
+        /* Gaya untuk teks di bawah gambar */
+        .gallery figcaption {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Membuat efek 3D */
+    margin: auto;
+  }
+
+  /* Card */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    animation: spin 5s linear infinite; /* Animasi rotasi tanpa henti */
+  }
+
+  /* Sisi depan dan belakang kartu */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+  }
+
+  /* Tampilan sisi depan */
+  .flip-card-front {
+    background-color: #333;
+  }
+
+  /* Tampilan sisi belakang */
+  .flip-card-back {
+    background-color: #4CAF50;
+    transform: rotateY(180deg);
+  }
+
+  /* Menyelaraskan gambar */
+  .flip-card-front img, .flip-card-back img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover; /* Agar gambar sesuai ukuran kartu */
+  }
+
+  /* Animasi rotasi */
+  @keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+  }
+</style>
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <!-- Gambar sisi depan -->
+      <img src="kom.jpeg" alt="Gambar Depan">
+    </div>
+    <div class="flip-card-back">
+      <!-- Gambar sisi belakang -->
+      <img src="jo.jpg" alt="Gambar Belakang">
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center; margin: 20px 0;">
+    <img src="Jo.jpg" width="150" height="150" style="border-radius: 50%;" />
+</div>
+
+    <article>
+        <h2>Menu Utama Website</h2>
+<h4>Selamat Datang di Website Kami</h4>
+
+<p style="color:black";>
+    Dengan penuh rasa syukur, kami mempersembahkan hasil kerja keras kami dalam bentuk website ini. 
+    Kami adalah tim yang terdiri dari individu-individu kreatif dan berkomitmen, yang memiliki tujuan 
+    untuk menciptakan karya yang tidak hanya fungsional tetapi juga estetik.
+</p>
+
+<p style="color:black";>
+    Website ini adalah wujud nyata dari semangat kolaborasi, dedikasi, dan inovasi. Dalam setiap elemen yang ada, 
+    kami berusaha untuk menghadirkan sesuatu yang tidak hanya memberikan informasi, tetapi juga menghadirkan 
+    pengalaman yang inspiratif.
+</p>
+
+<p style="color:black";>
+    Terima kasih telah meluangkan waktu untuk mengunjungi karya kami. Kami berharap apa yang kami sajikan bisa 
+    menjadi cerminan dari visi, kreativitas, dan profesionalisme yang kami junjung tinggi.
+</p>
+
+<p style="color:black";>
+    Di website ini kami memperkenalkan sebuah perusahaan percetakan terbaik, tempat ini menyediakan berbagai produk, seperti:
+    <b style="color: green;">
+        Baliho, Spanduk, Banner, Print Digital, Nota Custom, Plakat Mug, Undangan, ID Card, Menu Sticker, Decal, 
+        Cutting Sticker, X-Banner, Roll Banner, Neon Box, Pembatas Meja Akrilik, Ganci, Stempel, Kotak Saran, 
+        Blanko Kantor, Yasin, Pin, jilid buku hardcover dan softcover, dan lainnya.
+    </b>
+</p>
+
+<p><b style="color:red";>Salam Hangat, Anisa, Asikin, Ida, dan Juniardi</b></p>
+    </article>
+
+<div style="max-width: 600px; margin: 5em auto; border: 2px solid #333; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); overflow: hidden;">
+    <table border="1" width="100%" style="border-collapse: collapse; background-color: #f4f4f4;">
+        <thead>
+            <tr style="background-color: #333; color: gold;">
+                <th style="padding: 10px; text-align: left;">Perangkat Lunak</th>
+                <th style="padding: 10px; text-align: left;">Hasil dari Perangkat Lunak</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 15px; border: 1px solid #ddd;">
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li style="color:black";>Adobe Photoshop</li>
+                        <li style="color:black";>CorelDraw</li>
+                    </ul>
+                </td>
+                <td style="padding: 15px; border: 1px solid #ddd;">
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li style ="color:black";>Spanduk/Baliho</li>
+                        <li style="color:black";>Stempel, ID Card, Stiker</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div style="max-width: 600px; margin: 5em auto; border: 2px solid #333; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); overflow: hidden;">
+    <table border="1" width="100%" style="border-collapse: collapse; background-color: #f4f4f4;">
+        <thead>
+            <tr style="background-color: #333; color: gold;">
+                <th style="padding: 10px; text-align: left;">Perangkat Keras</th>
+                <th style="padding: 10px; text-align: left;">Hasil dari Perangkat Keras</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 15px; border: 1px solid #ddd;">
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li  style="color:black"; >Adobe Photoshop</li>
+                        <li  style="color:black";>CorelDraw</li>
+                    </ul>
+                </td>
+                <td style="padding: 15px; border: 1px solid #ddd;">
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li style ="color:black">Spanduk/Baliho</li>
+                        <li style ="color:black">Stempel, ID Card, Stiker</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        <h1 style="color: black">©untuk lebih selengkap nya klik ikon yang berada diatas untuk lebih mendalami.</h1>
+
+    
+
+    <script>
+        // Function to toggle (open/close) menu
+        function toggleMenu() {
+            var menuContainer = document.getElementById('menuContainer');
+            menuContainer.classList.toggle('active');
+        }
+    </script>
+        <div class="slider">
+        <div class="slides">
+            <img src="ry.jpeg" alt="Slide 1">
+            <img src="hbki.jpeg" alt="Slide 2">
+            <img src="gv.jpg" alt="Slide 3">
+             <img src="git.jpeg" alt="Slide 3">
+              <img src="fiz.jpeg" alt="Slide 3">
+        </div>
+    </div>
+        <footer>
+    <div class="gallery">
+        <figure>
+            <a href="https://example.com/gambar1" target="_blank">
+                <img src="ag.jepg" alt="Gambar 1">
+            </a>
+            <figcaption>Deskripsi Gambar 1</figcaption>
+        </figure>
+        <figure>
+            <a href="https://example.com/gambar2" target="_blank">
+                <img src="ag.jpeg" alt="Gambar 2">
+            </a>
+            <figcaption>Deskripsi Gambar 2</figcaption>
+        </figure>
+        <figure>
+            <a href="Hu.html" target="_blank">
+                <img src="apel.jpeg" alt="Gambar 3">
+            </a>
+ <b>Buah Enak</b>
+        </figure>
+        <figure>
+            <a href="j.html" target="_blank">
+                <img src="bil.jpeg" alt="Gambar 4">
+            </a>
+            <b>Kamen rider info</b>
+        </figure>
+    </div>
+    <div style="text-align: center;">
+    <h1 style="color: red;">follow us😄</h1>
+</div>
+        <div class="social-icons">
+            <a href="https://wa.me/+6281349012751" target="_blank"><img src="yt.png" alt="WhatsApp"></a>
+            <a href="https://www.tiktok.com/@juniarxy_xd" target="_blank"><img src="tt.jpeg" alt="TikTok"></a>
+            <a href="https://www.youtube.com/@jun697" target="_blank"><img src="ytbn.jpeg" alt="YouTube"></a>
+            <a href="https://www.instagram.com/yourusername" target="_blank"><img src="ita.jpeg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/Kin Ray" target="_blank"><img src="fc.jpeg" alt="Facebook"></a>
+        </div>
+        <p>&copy; copy right 20.</p>
+        
+    </footer>
+</body>
+</html>

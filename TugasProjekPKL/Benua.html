@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>European Beauty Theme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('/mnt/data/europe_landscape_background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: navy;
+        }
+
+        /* Header section styling */
+        .header {
+            background-color: rgba(70, 130, 180, 0.9); /* Steel blue */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #4682B4; /* Darker blue */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: white;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #e6e6fa; /* Lavender */
+            margin: 5px 0;
+        }
+
+        .menu-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 2px solid #6a5acd; /* Slate blue */
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: #6a5acd; /* Slate blue */
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu {
+            margin-top: 15px;
+            display: none;
+            flex-direction: column;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: white;
+            background-color: #4682B4; /* Steel blue */
+            padding: 10px;
+            margin: 6px 0;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: #4169E1; /* Royal blue */
+            transform: scale(1.05);
+        }
+
+        .content {
+            margin: 140px 20px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content h2 {
+            color: #6a5acd; /* Slate blue */
+        }
+
+        .content p {
+            color: #333;
+        }
+
+        .rounded-square {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .rounded-square img {
+            border-radius: 15px;
+            border: 3px solid #6a5acd;
+            max-width: 200px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Benua Eropa</h1>
+        <p>Informasi Flora dan Fauna di Eropa</p>
+    </div>
+
+    <div class="menu-container" id="menuContainer">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-menu">
+            <a href="Home.html">MENU UTAMA</a>
+            <a href="Hobbies.html">My Hobbies</a>
+            <a href="CV_Europe.pdf">CV</a>
+            <a href="Europe.html">Contact Us</a>
+            <a href="AboutUs.html">About Us</a>
+            <a href="Activities.html">Our Activities</a>
+        </div>
+    </div>
+
+    <h1 style="color:darkblue">1. Eropa</h1>
+
+   <div style="max-width: 600px; margin: 0em auto; border: 2px solid #333; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); overflow: hidden;">
+    <table border="1" width="100%" style="border-collapse: collapse; background-color: #f4f4f4;">
+        <thead>
+            <tr style="background-color: #333; color: lightblue;">
+                <th style="padding: 10px; text-align: left;">Flora</th>
+                <th style="padding: 10px; text-align: left;">Contohnya</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 15px; border: 1px solid #ddd; vertical-align: top;">
+                    <ul style="margin: 0; padding-left: 20px; list-style-position: inside;">
+                        <li style="color:black"><b style="color:darkblue">1. Eropa Utara</b></li>
+                        <li style="color:black"><b>2. Eropa Tengah</b></li>
+                        <li style="color:green"><b>3. Eropa Barat</b></li>
+                        <li style="color:purple"><b>4. Eropa Selatan</b></li>
+                    </ul>
+                </td>
+                <td style="padding: 15px; border: 1px solid #ddd; vertical-align: top;">
+                    <ul style="margin: 0; padding-left: 20px; list-style-position: inside;">
+                        <li style="color:darkblue">1. Di Eropa Utara, tumbuh tumbuhan tundra dan lumut di daerah yang bersalju.</li>
+                        <li style="color:black">2. Di Eropa Tengah, banyak ditemukan hutan campuran dan lahan pertanian.</li>
+                        <li style="color:green">3. Eropa Barat memiliki banyak hutan daun lebar dan hutan konifer.</li>
+                        <li style="color:purple">4. Di Eropa Selatan, terdapat hutan mediterania yang khas dengan pohon zaitun dan tumbuhan semak.</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>

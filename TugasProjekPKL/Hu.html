@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Fruit Theme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('/mnt/data/A_vibrant_background_filled_with_a_variety_of_colo.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header section styling */
+        .header {
+            background-color: rgba(255, 165, 0, 0.9); /* Semi-transparent orange */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ff4500; /* Darker orange */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: white;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #333;
+            margin: 5px 0;
+        }
+
+        .menu-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 2px solid #ff6347; /* Tomato color */
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: #ff6347; /* Tomato color */
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu {
+            margin-top: 15px;
+            display: none;
+            flex-direction: column;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: white;
+            background-color: #ffa500; /* Orange color */
+            padding: 10px;
+            margin: 6px 0;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: #ff4500; /* Darker orange */
+            transform: scale(1.05);
+        }
+
+        .content {
+            margin: 140px 20px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content h2 {
+            color: #ff6347; /* Tomato color */
+        }
+
+        .content p {
+            color: #333;
+        }
+
+        .rounded-square {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .rounded-square img {
+            border-radius: 15px;
+            border: 3px solid #ff6347;
+            max-width: 200px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1> Sweet Fruit World</h1>
+        <p>Discover the delicious world of fresh and juicy fruits!</p>
+    </div>
+
+    <div class="menu-container" id="menuContainer">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-menu">
+           <a href="Home.html">MENU UTAMA</a>
+            <a href="J.html">My Hobbies</a>
+            <a href="Hu.pdf">CV</a>
+            <a href=".html">Contact Us</a>
+            <a href="Aboutwe.html">About Us</a>
+            <a href="kegiatan_kami.html">Our Activities</a>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>1.Buah Mangga</h2>
+        <div class="rounded-square">
+            <img src="mg.jpeg" alt="Mango image">
+        </div>
+        <p><b>Nama "mangga" berasal dari bahasa Tamil, mankay,</b> yang berarti man "pohon mangga" + kay "buah". Kata ini dibawa ke Eropa oleh orang-orang Portugis dan diserap menjadi manga (bahasa Portugis), mango (bahasa Spanyol dan Inggris) dan lainnya.</p>
+        <p>Mangga berasal dari daerah di sekitar perbatasan India dengan Burma, dan telah menyebar ke Asia Tenggara sekitar 1500 tahun yang silam. Buah ini dikenal dalam berbagai bahasa daerah, seperti pêlêm atau poh (Jw.), poh (Bl.), paok (Sas.), oyile (Gor.), dan mamplam (Ac.).</p>
+    </div>
+        <div class="content">
+        <h2>2.Buah Apel</h2>
+        <div class="rounded-square">
+            <img src="apel.jpeg" alt="Mango image">
+        </div>
+        <p><b>Apel adalah buah yang populer dan dapat dengan mudah ditemukan di pasar tradisional ataupun di pasar swalayan. Apel memiliki rasa yang lezat dan menyegarkan sehingga banyak digemari oleh anak-anak. Tidak hanya itu, ternyata apel juga memberikan sejumlah manfaat kesehatan yang penting bagi tubuh anak-anak.</p>
+    </div>
+           <div class="content">
+        <h2>3.Buah Stroberi</h2>
+        <div class="rounded-square">
+            <img src="beri.jpeg" alt="Mango image">
+        </div>
+        <p><b>Sebelum menyebar ke banyak negara, stroberi pertama kali diproduksi di Eropa sekitar abad ke-13. Dilansir dari The University of Vermont, saat itu Perancis mulai mencangkok varietas stroberi kayu (fragraria vesca) dari hutan belantara ke kebun. Varietas ini diketahui merupakan jenis stroberi asli pertama di dunia.
+
+Setelah 200 tahun berlalu, tepatnya pada 1500-an, Eropa mulai membudidayakan varietas stroberi lain, yakni stroberi musky (fragraria moschata) di banyak kebun di Eropa. Penyebaran stroberi terus berlanjut. Pada 1600-an, Amerika Utara menyebarkan jenis baru berupa stroberi virginia (fragaria virginiana) ke Eropa. Inggris kemudian ikut menyusul penyebaran buah beri berbentuk hati ini pada akhir 1700-an hingga awal 1800-an. Selama periode ini, stroberi sangat populer di Inggris.
+
+Hal itu bisa dilihat dari banyaknya varietas stroberi terbaru yang bermunculan. Tukang kebun di Inggris disebut berhasil menanam varietas baru stroberi yang mulanya hanya terdiri dari tiga varietas, hingga bertambah menjadi hampir 30 varietas stroberi. Di tempat berbeda, seorang mata-mata dari Perancis diketahui membawa varietas stroberi chili (fragaria chiloensis) dari Chili ke Perancis pada 1714.
+</p>
+    </div>
+        <div class="content">
+        <h2>4.Buah Kelapa</h2>
+        <div class="rounded-square">
+            <img src="lapa.jpeg" alt="Mango image">
+        </div>
+        <p>Tanggal 2 September adalah memperingati hari "Kelapa Sedunia". Buah kelapa telah menjadi bagian tak terpisahkan dari kehidupan manusia sejak ribuan tahun yang lalu. Dikenal sebagai "pohon kehidupan," kelapa telah memainkan peran penting dalam berbagai budaya di seluruh dunia, terutama di daerah tropis</p>
+    </div>
+     <div class="content">
+        <h2>4.Buah Jeruk</h2>
+        <div class="rounded-square">
+            <img src="sang.jpeg" alt="Mango image">
+        </div>
+        <p>Rata-rata berat jeruk adalah 5 ons (140gr). Buah jeruk dilindungi secara eksternal oleh lapisan kulit yang tebal, yang membuatnya cukup tahan untuk diangkut. Konsentrasi air dalam buah, dalam kebanyakan varietas komersial, bervariasi dari 70% hingga 92%, yang tentu saja tergantung pada kelembaban yang ada dan kondisi pohon. Pohon jeruk dan lemon adalah contoh sempurna dari kasus di mana daun tanaman mengambil air dari buah, ketika kebutuhan air untuk dedaunan tidak dapat dipenuhi melalui sistem akar. Selama bulan-bulan musim panas dan di bawah kondisi rata-rata California Selatan, daun lemon mulai mengambil air dari buah-buahan sekitar pukul 6-7 pagi dan terus melakukannya sampai jam 5-6 sore.</p>
+    </div>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>
