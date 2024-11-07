@@ -1,0 +1,51 @@
+<html>
+  <body>
+    <form method= "post" action="gaji.php">
+      gol: <select name="gol">
+        <option value="1">l</option>
+        <option value="2">ll</option>
+        <option value="3">lll</option>
+      </select>
+      <br><br>
+      <input type="submit" name="hitung" value="HITUNG">
+    </form>
+    <?php
+    $gol = $_POST["gol"];
+    //filter gaji pokok menggunakan switch case switch (gol)
+    {
+    case 1: $gajipokok = 1250000; break;
+    case 2: $gajipokok = 1500000; break;
+    case 3: $gajipokok = 2000000; break;
+    default;
+    }
+    filter tunjangan menggunakan if
+    if ($gol == 1)
+    $tunj = 300000;
+    else if ($gol == 2)
+    $tunj = 350000;
+    else
+    $tunj = 400000;
+    //filter pot menggunakan if
+    if ($gol == 1)
+    $pot = $gajipokok * 0.1;
+    else if ($gol == 2)
+    $pot = $gajipokok * 0.75;
+    else
+    $pot = $gajipokok * 0.05;
+    
+    // menghitung gaji menggunakan switch case switch ($gol)
+    {
+    case 1 =$hitung=$gajipokok + $tunj - $pot; break;
+    case 2 =$hitung=$gajipokok + $tunj - $pot; break;
+    case 3=$hitung=$gajipokok + $tunj - $pot; break;
+    default;
+    }
+    echo "Gaji Pokok : $gajipokok <br>
+    Tunjangan : $tunj <br>
+    Potongan : $pot <br>
+    Total Gaji : $hitung ";
+    ?>
+    
+    
+  </body>
+</html>
