@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projek PKL.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('/mnt/data/europe_landscape_background.png') no-repeat center center fixed;
+            background-size: 100;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        /* Header section styling */
+        .header {
+            background-color: rgba(70, 130, 180, 0.9); /* Steel blue */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #4682B4; /* Darker blue */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: white;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #e6e6fa; /* Lavender */
+            margin: 5px 0;
+        }
+
+        .menu-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 2px solid #6a5acd; /* Slate blue */
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: #6a5acd; /* Slate blue */
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu {
+            margin-top: 15px;
+            display: none;
+            flex-direction: column;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: white;
+            background-color: #4682B4; /* Steel blue */
+            padding: 10px;
+            margin: 6px 0;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: #4169E1; /* Royal blue */
+            transform: scale(1.05);
+        }
+
+        .content {
+            margin: 140px 20px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content h2 {
+            color: #6a5acd; /* Slate blue */
+        }
+
+        .content p {
+            color: #333;
+        }
+
+        .rounded-square {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .rounded-square img {
+            border-radius: 15px;
+            border: 3px solid #6a5acd;
+            max-width: 200px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        img {
+            display: block;
+            margin: 20px auto; /* Center the images and add margin */
+            max-width: 80%; /* Make sure the images don't exceed 80% of the screen width */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: black;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Benua</h1>
+        <p>Informasi Benua</p>
+    </div>
+
+    <div class="menu-container" id="menuContainer">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-menu">
+   <a href="Home.html" style="color:yellow">Menu Utama🌅</a>
+  <a href="J.html" style="color:yellow">Kesukaan Film🎬</a>
+  <a href="Hu.html" style="color:yellow"> buah buahan🍓</a>
+  <a href="Nimal.html" style="color:yellow">World Animal🌏🦓🌵</a>
+  <a href="Benua.html" style="color:yellow">Benua🌏</a>
+        </div>
+    </div>
+
+    <h1 style="color:gold"><marquee>Tata Surya</marquee></h1>
+
+   <div style="max-width: 600px; margin: 0em auto; border: 2px solid #333; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); overflow: hidden;">
+    <table border="20px" width="100%" style="border-collapse: collapse; background-color: #f4f4f4;">
+    <h1 style="color:white">Ringkasan Materi</h1>
+     <img src="surya.jpeg" alt="Pegunungan Tinggi Selatan">
+    <p><b style="color:cyan">Di dalam jagat raya terdapat ribuan galaksi dengan jarak dan ukuran yang besar. Galaksi tempat tinggal kita disebut Bima Sakti. Galaksi Bima Sakti memiliki diameter 80.000 tahun caha- ya. Di dalam galaksi Bima Sakti terdapat jutaan bintang, termasuk Matahari. Matahari terletak 30.000 tahun cahaya dari pusat galaksi Bima Sakti. Matahari memiliki sebuah sistem yang disebut sebagai sistem tata surya dan Bumi termasuk anggota tata surya. Planet yang kita kenal ada delapan yaitu Merkurius, Venus, Bumi, Mars, Jupiter, Saturnus, Uranus, dan Neptunus. Kedelapan planet tersebut beredar mengelilingi matahari.</b></p>
+<h3 style="color:lime">A.Karateristik Sistem Tata Surya</h3>
+     <img src="sistem.jpg" alt="Pegunungan Tinggi Selatan">
+<p style="color:cyan"> 
+Tata surya terdiri atas bintang, planet, komet, asteroid, dan benda-benda langit lain yang membentuk satu sistem. Pusat sistem tata surya kita adalah Matahari. Sejak ditemukannya Pluto pada tahun 1930, para astronom memasukkan Pluto dalam kategori planet dalam tata surya sehingga sampai tahun 2006 ada sembilan planet dalam tata surya kita. Namun, dalam konferensi tanggal 24 Agustus 2006 di Cekoslovakia, para astronom yang tergabung dalam organisasi astronomi internasional (International Astronomical Union, IAU), memutuskan bahwa Pluto tidak termasuk dalam kategori planet.</p>
+<h3 style="color:cyan">Menurut para astronom, benda langit bisa dikategorikan sebagai planet jika memenuhi kriteria sebagai berikut.</h3>
+
+<li style="color:cyan">1. Memiliki diameter lebih dari 2.000 km dan berbentuk bulat.</li>
+<li style="color:cyan">2. Mempunyai orbit yang tidak memotong orbit planet lain.</li>
+<p style ="color:cyan">Orbit Pluto sedikit di bawah orbit Neptunus. Ukuran Pluto jauh lebih kecil dari delapan planet lainnya dalam sistem tata surya, ukuran Pluto bahkan lebih kecil daripada satelit (bulan) dari sistem tata surya (bulan dari Bumi, bulan dari Yupiter: lo, Europa, Ganymede, Callisto, Titan dan Tritan) sehingga berdasarkan hasil kajian para astronom modern, terdapat 8 (delapan) planet dalam tata surya kita, yaitu Merkurius, Venus, Bumi, Mars, Yupiter, Saturnus, Uranus, dan Neptunus, yang selalu beredar mengelilingi Matahari.</p>
+<p style="color:cyan">Sejak zaman dahulu manusia telah meneliti tentang gerak benda-benda langit sehingga muncul teori-teori baru tentang gerak benda langit yang benar. Dari teori tentang gerakan benda langit yang muncul, maka teori geosentris dan heliosentris yang paling terkenal.</p>
+<h3 style="color:lime">1.Teori Geosentris</h3>
+ <img src="sis.jpg" alt="Pegunungan Tinggi Selatan">
+<p style="color:cyan">Teori geosentris dikemukakan oleh Claudius Ptolomeus. Teori geosentris menyatakan bahwa Bumi merupakan pusat peredaran tata surya. Menurut Ptolomeus, setiap planet bergerak dalam lingkaran kecil atau episiklik dan pusat peredarannya adalah Bumi. Teori geosentris sudah ada beberapa abad sebelumnya. Namun Ptolomeus mampu menunjukkan perbaikan, yaitu memperlihatkan gerak planet-planet dengan jelas dengan variasi jarak planet dan Bumi.</p>
+<h3 style="color:lime">2. Teori Heliosentris</h3>
+ <img src="tris.jpg" alt="Pegunungan Tinggi Selatan">
+<p style="color:cyan">Teori heliosentris dikemukakan oleh Nicolaus Copernicus. Teori heliosentris berten- tangan dengan teori geosentris. Teori heliosentris menyatakan bahwa Matahari adalah pusat tata surya. Menurut Copernicus, Bumi dan anggota tata surya yang lain beredar mengelilingi Matahari dan Bumi berputar pada porosnya. Tepri atau asumsi Nicolaus Copemicus dituangkan dalam sebuah bukunya yang berjudul De Revolutionibus Orbium Coelestium (Mengenai Revolusi Orbit Langit) pada tahun 1543. Teori yang beranggapan bahwa Matahari sebagai pusat tata surya disebut heliosentris.</p>
+<p style="color:cyan">Tata surya kita merupakan suatu sistem yang terdiri atas Matahari sebagai pusat dan planet beredar mengelilinginya. Planet-planet dapat beredar mengelilingi Matahari pada lintasan tertentu karena gaya gravitasi atau gaya tarik-menarik antara planet dengan Matahari. Jarak planet-planet terhadap Matahari seperti pada tabel di bawah ini.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Nama Planet</th>
+                <th>Jarak rata-rata dati Matahari(juta)km</th>
+            </tr>
+        </thead>
+        <tbody>
+    <tr style="color:cyan">
+    <td style="color:cyan">1</td>
+    <td style="color:cyan">Merkurius</td>
+   <td style="coletor:cyan">58</td>
+     </tr>
+    <tr>
+   <td style="color:cyan">2</td>
+   <td style="color:cyan">Venus</td>
+   <td style="color:cyan">108</td>
+    </tr>
+    <tr>
+     <td style="color:cyan">3</td>
+    <td style="color:cyan">Bumi</td>
+    <td style="color:cyan">150</td>
+            </tr>
+                <tr>
+     <td style="color:cyan">4</td>
+    <td style="color:cyan">Mars</td>
+    <td style="color:cyan">150</td>
+            </tr>
+      <tr>
+     <td style="color:cyan">5</td>
+    <td style="color:cyan">Yupiter</td>
+    <td style="color:cyan">150</td>
+            </tr>
+     <tr>
+     <td style="color:cyan">6</td>
+    <td style="color:cyan">Saturnus</td>
+    <td style="color:cyan">1.427</td>
+            </tr>
+            <tr>
+     <td style="color:cyan">7</td>
+    <td style="color:cyan">Uranus</td>
+    <td style="color:cyan">2.870</td>
+            </tr>
+           <tr>
+     <td style="color:cyan">8</td>
+    <td style="color:cyan">Neptunus</td>
+    <td style="color:cyan">4.497</td>
+            </tr> 
+        </tbody>
+    </table>
+   <p style="color:cyan"> Planet-planet beredar mengelilingi Matahari melalui garis edar lintasan yang disebut orbit. Peredaran planet mengelilingi Matahari disebut revolusi. Waktu yang diperlukan oleh planet untuk melakukan sekali revolusi disebut kala revolusi. Kala revolusi Bumi satu tahun cahaya. Planet-planet beredar pada bidang edar yang hampir berhimpitan satu sama lain. Bidang edar planet Bumi disebut ekliptika. </p>
+      <p style="color:cyan"> Bagian planet yang terkena sinar Matahari hanya separuh. Bagian planet yang mendapat cahaya akan mengalami siang, sedangkan yang tidak akan mengalami malam. Demikian juga Bumi mengalami pergantian siang dan malam. Hal ini menunjukan bahwa planet berputar pada sumbunya.</p>  
+      <p style="color:cyan"> Perputaran planet mengelilingi sumbunya disebut rotasi. Waktu yang diperlukan planet berputar pada sumbunya untuk satu kali rotasi disebut kala rotasi. Anggota tata surya meliputi sebagai berikut.</p>
+ <h3 style="color:yellow">1.MATAHARI</h3>
+ <img src="ri.jpeg" alt="Pegunungan Tinggi Selatan">
+<p style="color:cyan"> Matahari merupakan pusat tata surya berupa bola gas yang bercahaya. Matahari merupakan salah satu bintang pada Galaksi Bima Sakti. Suhu permukaan Matahari 6.000 derajat celsius, dipancarkan ke luar angkasa sampai ke permukaan Bumi. Suhu inti Matahari sebesar 15-20 juta derajat celsius.</p>
+<p style="color:cyan">Meskipun Matahari tampak kecil jika dilihat dari Bumi, namun diameternya 109 kali lebih besar daripada diameter Bumi. Jarak Matahari ke Bumi sekitar 150 juta km sehingga cahaya Matahari menempuh waktu 8 menit 20 detik untuk sampai ke permukaan Bumi dengan kecepatan 300 juta meter per detik.</p>
+<p style="color:cyan">Matahari bukanlah bola api, melainkan bola gas yang berpijar. Unsur penyusun Matahari yang terbanyak adalah hidrogen (74%). Pada Matahari terjadi reaksi fusi, yaitu reaksi penggabungan dua atom atau lebih inti ringan menjadi suatu inti baru. Akibat reaksi nuklir tersebut, terbentuk energi kalor yang sangat besar dari adanya perubahan massa.</p>
+<h3 style="color:yellow">2.PLANET</h3>
+<p style="color:cyan">Planet merupakan benda langit yang mengitari matahari dengan bidang orbit yang eksklusif dan bersih dari objek sekitarnya serta memiliki massa yang cukup untuk gaya gravitasi sehingga mampu mempertahankan bentuknya. Berdasarkan definisi  tersebut, ada delapan planet, yaitu Merkurius, Venus, Bumi,Mars,Yupiter, Satumus. Uranus, dan Neptunus.</p>
+<p style="color:cyan">Para ahli astronomi telah mengelompokkan delapan planet ini berdasarkan hal-hal yang dianggap istimewa, seperti berikut ini</p>
+<img src="net.jpeg" alt="Pegunungan Tinggi Selatan">
+<li style="color:lime">a. Berdasarkan letaknya yang dilihat dari orbit Bumi, planet terdiri atas planet inferior dan planet superior. Pianet inferior adalah planet-planel yang terietak dalam orbit Bumi, yaitu Merkurius dan Venus. Sementara siu, planet superior adalah planet planet yang terletak di luar orbit Bumi, yaitu Mars, Jupiter, dan Saturnus</li>
+<li style="color:lime">b. Berdasarkan ukuran dan komposisi bahan penyusunnya, planet terdiri atas dua, yaitu planet terestial dan planet jovian. Planet yang ukurannya relatif kecil, berbatu, dan permukaannya diselimuti sedikit atmosfer dikelompokkan sebagai planet terestial. Contohnya adalah Bumi, Merkurius, Venus, dan Mars. Empat planet lain, yaitu Jupiter, Saturnus, Uranus, dan Neptunus termasuk planet jovian karena sebagian besar diselimuti oleh gas, cairan, bahkan es tebal, dan ukurannya pun relatif besar.</li>
+<li style="color:lime">c. Berdasarkan orbit asteroid planet terdiri atas planet dalam dan planet luar. Planet dalam di antaranya Merkurius, Venus, Bumi dan Mars. Sementara itu, Jupiter, Saturnus, Neptunus, dan Uranus termasuk dalam planet luar. Berikut akan dibahas karakteristik planet-planet.</li>
+<h3 style="color:yellow">a. Merkurius</h3>
+<img src="rius.jpg" alt="Pegunungan Tinggi Selatan">
+<p style="color:cyan">Merkurius adalah planet terdekat dari Matahari, jaraknya sekitar 58 juta kilometer dari Matahari. Merkurius tidak mudah dilihat dengan mata telanjang, tetapi sering terlihat di saat fajar dan senja hari sehingga dianggap sebagai bintang pagi dan bintang malam Merkurius bergerak mengelilingi Matahari sekali putaran dalam waktu 88 hari dan berotasi dengan periode 59 hari. Merkurius tidak memiliki satelit.</p>
+<h3 style="color:yellow">B.VENUS</h3>
+<img src="venus.jpg" alt="Pegunungan Tinggi Selatan">
+<p style="color:cyan">Venus merupakan planet terdekat kedua dari Matahari dalam tata surya kita. Jaraknya dari Matahari sekitar 108 juta kilometer. Permukaan planet Ini diselimuti awan tebal karbon dioksida sehingga sulit dilihat. Awan tersebut menahan energi Matahari yang mengenai permukaan Venus sehingga energi tetap terperangkap. Hal ini menyebabkan suhu permukaari planet Venus luar biasa tingginya, sekitar 480°C. Suhu ini cukup panas untuk melebür logam, misalnya aluminium. Venus juga tidak memiliki satelit seperti Merkurius.</p>
+<h3 style="color:yellow">C.BUMI</h3>
+<img src="bumi.jpeg" alt="Pegunungan Tinggi Selatan">
+<p style="color:cyan"> Bumi adalah planet ketiga dalam sistem tata surya Keadaan permukaan Planet Bumi sangat berbeda dibandingkan permukaan Planel Merkurius dan Venus. Suhu dan tekanan di permukaan Bumi memungkinkan air berada dalam wujud padat, cair, maupun gas. Bumi berdiameter sekitar 12.700 km. Rata-rata periode evolusinya 365,25 hari dan periode rotasinya sekitar 24 jam. Bumi memiliki satu satelit, yaitu Bulan</p>
+<h3 style="color:yellow">D.MARS</h3>
+<img src="mars.jpeg" alt="Pegunungan Tinggi Selatan">
+<p style="color:cyan">Mars merupakan planet keempat. Mars berukuran lebih kecil dari Bumi, dengan diameter sekitar 6.800 kilometer. Mars memiliki jarak dengan Matahari sekitar 228 juta kilometer, periode revolusi 687 hari, dan berotasi dengan periode sekitar 24,6 jam. Mars memiliki dua satelit, yaitu Phobos dan Delmos.</p>
+<h3 style="color:yellow">E.YUPITER</h3>
+<img src="ter.png" alt="Pegunungan Tinggi Selatan">
+<p style="color:cyan"> Yupiter merupakan salah satu dari empat raksasa gas dalam sistem tala surya. Planet Yupiter merupakan planet terbesar dalam tata surya. Planet ini banyak mengandung gas amonia (NH) dan gas metana (CH). Yupiter memiliki diameter 141.700 km, dan massa 2,098 x 10 kg. Yupiter merupakan planet yang sering mengalami badai, Badai bintik merah raksasa yang terjadi di atmosfer Yupiter merupakan badai paling dahsyat di tata surya. Badai ini telah berlangsung selama berabad-abad dan mencakup wilayah yang sangat luas.</p>
+<h3 style="color:yellow">F.SATURNUS</h3>
+<img src="satur.jpg" alt="Pegunungan Tinggi Selatan">
+<p style="color:cyan"> Raksasa gas kedua dalam tata surya adalah Saturnus. Planet Saturnus mempunyai ciri khusus, yaitu memiliki sabuk cincin raksasa berwana putih yang terdiri atas bongkahan es atau batu kerikil yang dilapisi es. Saturnus merupakan planet terbesar kedua setelah Yupiter, dengan diameter 120.000 km dah massa 6,2845 x 102 kg. Suhu permukaan Saturnus sangat rendah, yaitu -45°C.</p>
+<h3 style="color:yellow">G.URANUS </h3>
+<p style="color:cyan"> Uranus diselubungi awan tebal sehingga permukaannya sukar diselidiki. Diameter Uranus 50.800 km, massanya 9,603 x 102 kg, sedangkan suhu permu- kaannya-180°C. Uranus adalah planet yang paling ringan di antara planet-planet luar. Planet ini memiliki kelainan ciri orbit, yaitu mengedari Matahari dengan kemiringan poros 90 derajat pada ekliptika. Planet ini memiliki inti yang sangat dingin dibandingkan gas raksasa lainnya dan hanya sedikit memancarkan energi panas.</p>
+<h3 style="color:yellow">H.NEPTUNUS</h3>
+<p style="color:cyan"> Neptunus merupakan planet yang paling jauh dari Matahari. Neptunus memiliki diameter 48.600 km, massa 1,137 x 10 kg, dan suhu permukaan -200°C. Planet Neptunus tampak berwarna biru kehijauan karena gas metana, hidrogen, dan helium yang terkandung dalam atmosfernya.</p>
+<p style="color:cyan">Gerakan planet-planet mengitari Matahari disebabkan oleh adanya gaya gravitasi. Secara umum, hukum gravitasi mengatakan bahwa benda-benda yang memiliki massa akan tarik-menarik yang besarnya berbanding terbalik dengan kuadrat jaraknya. Semakin besar jaraknya semakin kecil gaya tariknya dan semakin kecil jaraknya semakin besar gaya tariknya.</p> 
+<h2 style="color:lime">Gaya gravitasi Matahari dirumuskan sebagai berikut</h2>
+<img src="sit.jpg" alt="Pegunungan Tinggi Selatan">
+<p style="color:red">Keterangan:</p>
+<li style="color:magenta">G= konstanta gravitasi</li>
+<li style="color:magenta">m = massa planet</li>
+<li style="color:magenta">M massa Matahari</li>
+<li style="color:magenta">r=jarak planet dengan Matahari</li>
+<li style="color:magenta">F= gaya gravitasi Matahari</li>
+ <h3 style="color:yellow">3.Satelit</h3> <p style="color:cyan">Satelit adalah benda langit yang bergerak mengelilingi planet dan bersama planet mengelilingi Matahari. Di samping itu, satelit juga berputar pada porosnya. Arah peredaran satelit searah dengan peredaran planetnya. Satelit terdiri atas satelit alami dan satelit buatan.</p>
+ <p style="color:cyan">Nama satelit alami yang dimiliki oleh beberapa planet sebagai berikut.</p>
+ <li style="color:white"><b style="color:lime">A. Bumi</b>: Bulan.</li>  <li style="color:white"><b style="color:lime">B. Mars</b> : Phobos, Deimos, Metis, dan Adrastea.</li>   <li style="color:white"><b style="color:lime">C. Jupiter</b> : Amalthea, Thebe, Lo, Europa, Ganymede, Callisto, Leda, Himalia, Elara, Ananke, Carme, Pasiphae, dan Sinope.</li>   <li style="color:white"><b style="color:lime">D.Saturnus</b>: 198rS13, Atlas, Prometheus, Pandora Ephimeteus, Janus, Mimas, Enceladus, Tehys, Telesto, Calypso, Dione, Helene, Rhea, Titan, yperion, Lapetus, dan Phoebe.</li>   <li style="color:white"><b style="color:lime">E. Uranus</b> : Cordelia, Ophelia, Bianca, Cressida, Desdemona, Juliet, Portia, Rosalind, Belinda, Puck, Miranda, Puck, Moranda, Ariel, Umbriel, Titania, Oberon, Triton, dan Nereid.</li>
+ <p style="color:cyan">Satelit buatan merupakan satelit yang dibuat oleh manusia untuk tujuan tertentu.</p>
+ <h2 style="color:yellow">4.KOMET</h2>
+ <p style="color:cyan"> Komet merupakan rangkaian cahaya yang bergerak dari satu konstelasi ke konstelası lain di antara bintang binnnka Rangkaian cahaya komet memperlihatkan seperti unjakati rambut panjang. Oleh karena itu, komet sering disebut bintang berekor. Ketika mendekati Matahari, ekor komet selalu berada di depan, menjauhi Matahari. Hal ini disebabkan karena adanya tekanan sorot pada cahaya Matahari yang mendorong partikel-partikel terkecil selalu ke arah yang berlawanan dengan Matahari. Komet terdin atas berbaga gas termasuk di dalamnya adalah sianogen (S/CN), karbon dioksida (CO₂), karbon monoksida (CO), nitrogen (N.), hidroksil (OH), dan nitrogen hidrid (NH). Pergerakan komet tampak dalam pemandangan sebagai lambaian yang indah yang kemudian lenyap begitu saja selama bertahun-tahun. Komet bergerak menjelajahi wilayah langit pada berbagai sudut pada bidang lata surya. Bentuk orbit komet seperti cerutu panjang.</p>
+  <p style="color:cyan">Berikut gambar orbit komet.</p>
+ <img src="kitaran.jpg" alt="Pegunungan Tinggi Selatan"> 
+   <p style="color:cyan">Venus Merkurius Bumi Matahari Mars Komet menyemburkan gas bercahaya yang dapat terlihat dari bumi. Bagian-bagian komet, sebagai berikut.</p>  <li style="color:white">a.Inti komet, yaitu bagian komet yang kecil tetapi padat tersusun dari debu dan gas</li>
+    <li style="color:white">b. Koma, yaitu daerah kabut di sekeliling inti.</li>
+     <li style="color:white">C. Ekor komet, yaitu bagian yang memanjang dan panjarignya mampu mencapai satu satuan astro- nomi (1SA jarak antara Bumi dan Matahari).</li>
+     <h3 style="color:yellow">5.Asteroid</h3>
+      <img src="kitaran.jpg" alt="Pegunungan Tinggi Selatan"> 
+     <p style="color:cyan"> Asteroid adalah benda angkasa yang terbesar berukuran beberapa ratus kilometer sampai yang terkecil berukuran kurang dari satu kilometer Keba- nyakan asteroid beredar mengelilingi Matahari dengan orbit di antara planet Mars dan planet Jupiter Kum- pulan asteroid yang beredar dalam lintasan utama tersebut disebut sabuk asteroid.</p>
+<p style="color:cyan">  Asteroid tampak dalam jumlah yang tidak begitu banyak dan beredar di luar lintasan utama. Asteroid yang dinamakan Apollo beredar mengelilingi Matahari dan memotong garis edar bumi. Asteroid terbesar yang diketahui dinamakan Ceres (diambil dari nama dewi pertanian bangsa Romawi) dengan diameter kurang lebih 750 km.</p>
+ <h3 style="color:yellow">6. Meteorit</h3>
+ <img src="kitaran.jpg" alt="Pegunungan Tinggi Selatan"> 
+ <p style="color:cyan">Meteoroid adalah batuan-batuan kecil yang sangat banyak dan melayang- layang di angkasa luar Batuan-batuan ini banyak mengandung unsur besi dan nikel. Batuan-batuan ini masuk ke atmosfer bumi karena pengaruh gravitasi Bumi Gesekan dengan atmosfer Bumi menghasilkan panas yang membakar grabis batuan-batuan itu Sebelum sempat mencapai permukaan Bumi. Batuan-batuar habis balda langit yang bergesekan dengan atmosfer Bumi dan habis terbakar sebelu atau beardi permukaan.</p>
+</div>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>

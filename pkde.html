@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Planet Jupiter Theme</title>
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1519157501794-29b200d70567'); /* Gambar latar belakang Jupiter */
+            background-size: cover;
+            background-position: center;
+            font-family: 'Roboto', sans-serif;
+            color: white; /* Warna teks agar kontras dengan latar belakang */
+            overflow: hidden; /* Menghindari scrollbar */
+        }
+        .header, .footer {
+            background: rgba(255, 165, 0, 0.7); /* Warna oranye Jupiter dengan transparansi */
+            border-radius: 20px; /* Membuat bagian bulat */
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        .content {
+            background: rgba(0, 0, 0, 0.6); /* Latar belakang gelap untuk konten */
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        .scale-effect {
+            transition: transform 0.3s;
+        }
+        .scale-effect:hover {
+            transform: scale(1.1);
+        }
+        .dots {
+            position: absolute;
+            top: 50%;
+            right: -100px; /* Mengatur posisi di luar jendela */
+            transform: translateY(-50%);
+            z-index: 0; /* Agar berada di belakang konten */
+        }
+        .dot {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.7; /* Transparansi untuk efek visual */
+        }
+    </style>
+</head>
+<body>
+    <div class="dots">
+        <!-- Bintik-bintik berwarna-warni -->
+        <div class="dot" style="width: 30px; height: 30px; background-color: #FF5733; top: 10%; left: 20%;"></div>
+        <div class="dot" style="width: 20px; height: 20px; background-color: #33FF57; top: 30%; left: 10%;"></div>
+        <div class="dot" style="width: 25px; height: 25px; background-color: #3357FF; top: 50%; left: 25%;"></div>
+        <div class="dot" style="width: 15px; height: 15px; background-color: #FF33A1; top: 70%; left: 5%;"></div>
+        <div class="dot" style="width: 35px; height: 35px; background-color: #FFC300; top: 80%; left: 30%;"></div>
+        <div class="dot" style="width: 28px; height: 28px; background-color: #FF33F6; top: 20%; left: 40%;"></div>
+        <div class="dot" style="width: 18px; height: 18px; background-color: #33FFF9; top: 60%; left: 15%;"></div>
+        <div class="dot" style="width: 22px; height: 22px; background-color: #FF5733; top: 40%; left: 35%;"></div>
+    </div>
+
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+        <div class="header">
+            <h1>Selamat Datang di Planet Jupiter</h1>
+        </div>
+
+        <div class="content">
+            <div class="scale-effect">
+                <h2>Elemen dengan Efek Skala</h2>
+                <p>Jupiter adalah planet terbesar di tata surya kita. Dikenal dengan atmosfernya yang berwarna-warni dan badai besar, termasuk Great Red Spot.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2024 Planet Jupiter. Semua hak dilindungi.</p>
+        </div>
+    </div>
+</body>
+</html>

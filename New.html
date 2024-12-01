@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman dengan Sampul</title>
+    <style>
+        /* Gaya umum untuk halaman */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        /* Gaya untuk sampul */
+        .sampul {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background-image: url('ag.jpeg'); /* Ganti dengan URL gambar sampul */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Efek overlay untuk gelap di atas gambar */
+        .sampul::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.6); /* Transparansi overlay */
+            z-index: 0;
+        }
+
+        /* Konten di dalam sampul */
+        .sampul-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .sampul h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .sampul p {
+            font-size: 1.5em;
+            margin-top: 10px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Animasi fade-in untuk konten */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Animasi warna background sampul */
+        @keyframes bgGlow {
+            0% { background-color: rgba(255, 0, 0, 0.5); }
+            50% { background-color: rgba(255, 0, 0, 0.2); }
+            100% { background-color: rgba(255, 0, 0, 0.5); }
+        }
+        .sampul::before {
+            animation: bgGlow 6s infinite alternate;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Bagian Sampul -->
+    <section class="sampul">
+        <div class="sampul-content">
+            <h1>Selamat Datang di Halaman Saya</h1>
+            <p>Ini adalah teks sambutan di sampul halaman</p>
+        </div>
+    </section>
+
+</body>
+</html>

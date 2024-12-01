@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projek PKL</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .menu-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f39c12; /* Fruit-inspired orange background */
+            border: 2px solid #e67e22; /* Darker orange border */
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background-color: #e74c3c; /* Tomato color */
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-icon div {
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+        .nav-menu {
+            display: none; /* Hidden by default */
+            background: url('https://example.com/fruit-pattern.jpg') no-repeat center; /* Background with fruit pattern */
+            background-size: cover;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            width: 200px;
+            z-index: 1;
+            border: 2px solid #e67e22;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            background-color: #e67e22; /* Orange color on hover */
+            color: white;
+        }
+
+        .menu-container.active .nav-menu {
+            display: block;
+        }
+
+        aside nav {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            background-color: #eee;
+            padding: 10px;
+        }
+
+        aside nav a img {
+            width: 40px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f0f0f0, #e6e6e6); /* Light gradient background */
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            background: linear-gradient(to right, red, yellow);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .digital-clock {
+            font-size: 1.5em;
+            color: #fff;
+            padding: 10px;
+            background-color: #333;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            text-align: right;
+            margin-right: 20px;
+            box-shadow: 0 0 10px #fff;
+            animation: glow 1s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px red, 0 0 40px red, 0 0 50px red;
+            }
+            to {
+                box-shadow: 0 0 20px #fff, 0 0 30px yellow, 0 0 40px yellow, 0 0 50px yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1> 😊Projek PKL 😊</h1>
+        <div class="digital-clock" id="digitalClock"></div>
+    </header>
+
+    <div class="menu-container" id="menuContainer">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-menu">
+            <a href="J.html">Kesukaan Film</a>
+            <a href="Hu.html">Buah buahan</a>
+            <a href="Contactwe.html">Contact Us</a>
+            <a href="Aboutwe.html">About Us</a>
+            <a href="kegiatan kami.html">Our Activities</a>
+        </div>
+    </div>
+
+    <script>
+        // Function to update the digital clock every second
+        function updateClock() {
+            var now = new Date();
+            var hours = String(now.getHours()).padStart(2, '0');
+            var minutes = String(now.getMinutes()).padStart(2, '0');
+            var seconds = String(now.getSeconds()).padStart(2, '0');
+            var timeString = hours + ':' + minutes + ':' + seconds;
+            document.getElementById('digitalClock').textContent = timeString;
+        }
+
+        // Update clock immediately and then every second
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        // Function to toggle (open/close) menu
+        function toggleMenu() {
+            var menuContainer = document.getElementById('menuContainer');
+            menuContainer.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

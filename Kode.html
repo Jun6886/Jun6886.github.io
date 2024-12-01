@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Pengaduan Masyarakat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(circle, #1b2735, #090a0f);
+            color: #ffffff;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        }
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffcc00;
+            text-shadow: 0 0 10px #ffcc00, 0 0 20px #ff9900;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ffcc00;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #28a745;
+            color: #fff;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 0 0 5px #28a745, 0 0 10px #21c25e;
+        }
+        button:hover {
+            background-color: #21c25e;
+            text-shadow: 0 0 10px #21c25e, 0 0 20px #28ff79;
+        }
+        #laporanSection, #hasilSection {
+            display: none;
+        }
+        #fireworks {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 10;
+        }
+.firework-message {
+            color: #ffffff;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20%;
+            text-shadow: 0 0 10px #ff6600, 0 0 20px #ff9900;
+        }
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #ff6347;
+            border-radius: 50%;
+            animation: explode 1.5s ease-out infinite;
+            box-shadow: 0 0 5px #ff6347, 0 0 10px #ff4500;
+        }
+        @keyframes explode {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+        .result-container img {
+            max-width: 100%;
+            margin-top: 10px;
+        }
+        .result-container {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        /* Efek Bintang */
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: #fff;
+            animation: twinkle 2s infinite;
+        }
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 0.3; }
+        }
+    </style>
+</head>
+<body>
+  <div id="stars"></div>
+    
+    <div class="container">
+        <section id="loginSection">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="namaLogin">Masukkan Nama Anda:</label>
+                    <input type="text" id="namaLogin" name="namaLogin" placeholder="Masukkan nama Anda" required>
+                </div>
+                <button type="submit">Masuk</button>
+            </form>
+        </section>
+
+        <!-- Halaman Laporan -->
+        <section id="laporanSection">
+            <h2>Buat Laporan Pengaduan</h2>
+            <form id="laporanForm">
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap:</label>
+                    <input type="text" id="nama" name="nama" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="pengaduan">Isi Pengaduan:</label>
+                    <textarea id="pengaduan" name="pengaduan" rows="5" placeholder="Tuliskan pengaduan Anda" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="gambar">Unggah Gambar (Opsional):</label>
+                    <input type="file" id="gambar" name="gambar" accept="image/*">
+                </div>
+                <button type="submit">Kirim Laporan</button>
+            </form>
+        </section>
+
+        <!-- Tampilan Hasil -->
+        <section id="hasilSection">
+            <h2>Hasil Pengaduan Anda</h2>
+            <div class="result-container" id="hasilContainer"></div>
+            <button onclick="location.reload()">Kembali</button>
+        </section>
+
+        <!-- Animasi Petasan -->
+        <div id="fireworks">
+            <div class="firework-message">Selamat, pengaduan Anda telah terkirim!</div>
+            <div id="firework-container"></div>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        const laporanForm = document.getElementById('laporanForm');
+        const loginSection = document.getElementById('loginSection');
+        const laporanSection = document.getElementById('laporanSection');
+        const hasilSection = document.getElementById('hasilSection');
+        const hasilContainer = document.getElementById('hasilContainer');
+        const namaInput = document.getElementById('nama');
+        const namaLoginInput = document.getElementById('namaLogin');
+        const fireworks = document.getElementById('fireworks');
+        const fireworkContainer = document.getElementById('firework-container');
+
+        // Proses Login
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const namaLogin = namaLoginInput.value.trim();
+
+            if (namaLogin) {
+                alert(`Selamat datang, ${namaLogin}!`);
+                namaInput.value = namaLogin;
+                loginSection.style.display = 'none';
+                laporanSection.style.display = 'block';
+            } else {
+                alert('Harap masukkan nama Anda.');
+            }
+        });
+
+        // Proses Pengiriman Laporan
+        laporanForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Ambil data dari form
+            const nama = namaInput.value.trim();
+            const email = document.getElementById('email').value.trim();
+            const pengaduan = document.getElementById('pengaduan').value.trim();
+            const gambar = document.getElementById('gambar').files[0];
+
+            // Tampilkan data yang diisi
+            let hasilHTML = `<p><strong>Nama:</strong> ${nama}</p>`;
+            hasilHTML += `<p><strong>Email:</strong> ${email}</p>`;
+            hasilHTML += `<p><strong>Pengaduan:</strong> ${pengaduan}</p>`;
+            if (gambar) {
+                const gambarURL = URL.createObjectURL(gambar);
+                hasilHTML += `<p><strong>Gambar:</strong></p><img src="${gambarURL}" alt="Gambar Laporan">`;
+            } else {
+                hasilHTML += `<p><strong>Gambar:</strong> Tidak ada gambar</p>`;
+            }
+            hasilContainer.innerHTML = hasilHTML;
+
+            // Tampilkan animasi petasan
+            showFireworks();
+
+            // Pindah ke halaman hasil
+            setTimeout(() => {
+                fireworks.style.display = 'none';
+                laporanSection.style.display = 'none';
+                hasilSection.style.display = 'block';
+            }, 2000);
+        });
+
+        // Animasi Petasan
+        function showFireworks() {
+            fireworks.style.display = 'block';
+
+            for (let i = 0; i < 20; i++) {
+                const firework = document.createElement('div');
+                firework.className = 'firework';
+                firework.style.left = `${Math.random() * 100}%`;
+                firework.style.top = `${Math.random() * 100}%`;
+                fireworkContainer.appendChild(firework);
+
+                setTimeout(() => {
+                    firework.remove();
+                }, 1500);
+            }
+        }
+        const starsContainer = document.getElementById('stars');
+
+        // Buat bintang animasi
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>

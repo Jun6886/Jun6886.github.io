@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Arsip Surat</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #2c3e50, #3498db);
+      animation: backgroundAnimation 5s infinite alternate;
+    }
+    
+    @keyframes backgroundAnimation {
+      0% { background: linear-gradient(to bottom, #2c3e50, #3498db); }
+      100% { background: linear-gradient(to bottom, 
+      black, black); }
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      animation: fadeIn 2s;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .header, .footer {
+      background: #42a5f5;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      font-size: 2.5em;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .content form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content form input, .content form textarea, .content form button {
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .content form input, .content form textarea {
+      border: 1px solid #ddd;
+      background: #fff;
+    }
+
+    .content form button {
+      background: #42a5f5;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .content form button:hover {
+      background: #1e88e5;
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #confirmation {
+      display: none;
+      text-align: center;
+      font-size: 18px;
+      color: #42a5f5;
+      animation: glowText 2s infinite alternate;
+    }
+
+    @keyframes glowText {
+      0% { text-shadow: 0 0 5px #fff, 0 0 10px #42a5f5, 0 0 15px #42a5f5; }
+      100% { text-shadow: 0 0 10px #fff, 0 0 20px #42a5f5, 0 0 30px #42a5f5; }
+    }
+
+    #fireworks {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .firework {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: #ffcc00;
+      animation: explosion 1s infinite ease-out;
+      border-radius: 50%;
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+    }
+
+    @keyframes explosion {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(3); opacity: 0; }
+    }
+
+    .report {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background: #f9f9f9;
+    }
+
+    .report img {
+      max-width: 100%;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Aplikasi Arsip Surat</h1>
+    </div>
+    <div class="content">
+      <!-- Login Section -->
+      <div id="login-section">
+        <h2>Login</h2>
+        <p>Masukkan nama Anda untuk masuk:</p>
+        <form id="login-form">
+          <input type="text" id="username" placeholder="Nama Anda" required>
+          <button type="button" onclick="login()">Masuk</button>
+        </form>
+      </div>
+      
+      <!-- Report Form Section -->
+      <div id="report-section" style="display: none;">
+        <h2>Isi Laporan</h2>
+        <form id="report-form">
+          <input type="text" id="title" placeholder="Judul Surat" required>
+          <textarea id="description" placeholder="Deskripsi Surat" rows="4" required></textarea>
+          <input type="file" id="image" accept="image/*" required>
+          <button type="button" onclick="submitReport()">Kirim Laporan</button>
+        </form>
+        <div id="confirmation">
+          <h3>Selamat! Pesanan Anda telah terkirim.</h3>
+          <div id="fireworks">
+            <div class="firework"></div>
+            <div class="firework"></div>
+            <div class="firework"></div>
+          </div>
+        </div>
+        <div id="submitted-report" class="report" style="display: none;"></div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>© 2024 Aplikasi Arsip Surat</p>
+    </div>
+  </div>
+  
+  <script>
+    function login() {
+      const username = document.getElementById("username").value;
+      if (username) {
+        alert(`Selamat datang, ${username}!`);
+        document.getElementById("login-section").style.display = "none";
+        document.getElementById("report-section").style.display = "block";
+      } else {
+        alert("Nama tidak boleh kosong!");
+      }
+    }
+
+    function submitReport() {
+      const title = document.getElementById("title").value;
+      const description = document.getElementById("description").value;
+      const image = document.getElementById("image").files[0];
+      if (title && description && image) {
+        document.getElementById("confirmation").style.display = "block";
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const reportHTML = `
+            <h4>Judul: ${title}</h4>
+            <p>Deskripsi: ${description}</p>
+            <img src="${e.target.result}" alt="Gambar Surat">
+          `;
+          document.getElementById("submitted-report").innerHTML = reportHTML;
+          document.getElementById("submitted-report").style.display = "block";
+        };
+        reader.readAsDataURL(image);
+        setTimeout(() => {
+          document.getElementById("confirmation").style.display = "none";
+        }, 3000);
+      } else {
+        alert("Harap isi semua data!");
+      }
+    }
+  </script>
+</body>
+</html>
