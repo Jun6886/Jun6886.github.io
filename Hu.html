@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Fruit Theme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('/mnt/data/A_vibrant_background_filled_with_a_variety_of_colo.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header section styling */
+        .header {
+            background-color: rgba(255, 165, 0, 0.9); /* Semi-transparent orange */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #ff4500; /* Darker orange */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: white;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #333;
+            margin: 5px 0;
+        }
+
+        .menu-container {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 2px solid #ff6347; /* Tomato color */
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: #ff6347; /* Tomato color */
+            transition: all 0.3s ease;
+        }
+
+        .nav-menu {
+            margin-top: 15px;
+            display: none;
+            flex-direction: column;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: white;
+            background-color: #ffa500; /* Orange color */
+            padding: 10px;
+            margin: 6px 0;
+            border-radius: 8px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: #ff4500; /* Darker orange */
+            transform: scale(1.05);
+        }
+
+        .content {
+            margin: 140px 20px 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .content h2 {
+            color: #ff6347; /* Tomato color */
+        }
+
+        .content p {
+            color: #333;
+        }
+
+        .rounded-square {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .rounded-square img {
+            border-radius: 15px;
+            border: 3px solid #ff6347;
+            max-width: 200px;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1> Sweet Fruit World</h1>
+        <p>Discover the delicious world of fresh and juicy fruits!</p>
+    </div>
+
+    <div class="menu-container" id="menuContainer">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    <div class="nav-menu">
+   <a href="Home.html" style="color:yellow">Menu Utama🌅</a>
+  <a href="J.html" style="color:yellow">Kesukaan Film🎬</a>
+  <a href="Hu.html" style="color:yellow"> buah buahan🍓</a>
+  <a href="Nimal.html" style="color:yellow">World Animal🌏🦓🌵</a>
+  <a href="Benua.html" style="color:yellow">Benua🌏</a>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <h2>1.Buah Mangga</h2>
+        <div class="rounded-square">
+            <img src="mg.jpeg" alt="Mango image">
+        </div>
+        <p><b>Nama "mangga" berasal dari bahasa Tamil, mankay,</b> yang berarti man "pohon mangga" + kay "buah". Kata ini dibawa ke Eropa oleh orang-orang Portugis dan diserap menjadi manga (bahasa Portugis), mango (bahasa Spanyol dan Inggris) dan lainnya.</p>
+        <p>Mangga berasal dari daerah di sekitar perbatasan India dengan Burma, dan telah menyebar ke Asia Tenggara sekitar 1500 tahun yang silam. Buah ini dikenal dalam berbagai bahasa daerah, seperti pêlêm atau poh (Jw.), poh (Bl.), paok (Sas.), oyile (Gor.), dan mamplam (Ac.).</p>
+    </div>
+        <div class="content">
+        <h2>2.Buah Apel</h2>
+        <div class="rounded-square">
+            <img src="apel.jpeg" alt="Mango image">
+        </div>
+        <p><b>Apel adalah buah yang populer dan dapat dengan mudah ditemukan di pasar tradisional ataupun di pasar swalayan. Apel memiliki rasa yang lezat dan menyegarkan sehingga banyak digemari oleh anak-anak. Tidak hanya itu, ternyata apel juga memberikan sejumlah manfaat kesehatan yang penting bagi tubuh anak-anak.</p>
+    </div>
+           <div class="content">
+        <h2>3.Buah Stroberi</h2>
+        <div class="rounded-square">
+            <img src="beri.jpeg" alt="Mango image">
+        </div>
+        <p><b>Sebelum menyebar ke banyak negara, stroberi pertama kali diproduksi di Eropa sekitar abad ke-13. Dilansir dari The University of Vermont, saat itu Perancis mulai mencangkok varietas stroberi kayu (fragraria vesca) dari hutan belantara ke kebun. Varietas ini diketahui merupakan jenis stroberi asli pertama di dunia.
+
+Setelah 200 tahun berlalu, tepatnya pada 1500-an, Eropa mulai membudidayakan varietas stroberi lain, yakni stroberi musky (fragraria moschata) di banyak kebun di Eropa. Penyebaran stroberi terus berlanjut. Pada 1600-an, Amerika Utara menyebarkan jenis baru berupa stroberi virginia (fragaria virginiana) ke Eropa. Inggris kemudian ikut menyusul penyebaran buah beri berbentuk hati ini pada akhir 1700-an hingga awal 1800-an. Selama periode ini, stroberi sangat populer di Inggris.
+
+Hal itu bisa dilihat dari banyaknya varietas stroberi terbaru yang bermunculan. Tukang kebun di Inggris disebut berhasil menanam varietas baru stroberi yang mulanya hanya terdiri dari tiga varietas, hingga bertambah menjadi hampir 30 varietas stroberi. Di tempat berbeda, seorang mata-mata dari Perancis diketahui membawa varietas stroberi chili (fragaria chiloensis) dari Chili ke Perancis pada 1714.
+</p>
+    </div>
+        <div class="content">
+        <h2>4.Buah Kelapa</h2>
+        <div class="rounded-square">
+            <img src="lapa.jpeg" alt="Mango image">
+        </div>
+        <p>Tanggal 2 September adalah memperingati hari "Kelapa Sedunia". Buah kelapa telah menjadi bagian tak terpisahkan dari kehidupan manusia sejak ribuan tahun yang lalu. Dikenal sebagai "pohon kehidupan," kelapa telah memainkan peran penting dalam berbagai budaya di seluruh dunia, terutama di daerah tropis</p>
+    </div>
+     <div class="content">
+        <h2>
+        5.Buah Jeruk</h2>
+        <div class="rounded-square">
+            <img src="sang.jpeg" alt="Mango image">
+        </div>
+        <p>Rata-rata berat jeruk adalah 5 ons (140gr). Buah jeruk dilindungi secara eksternal oleh lapisan kulit yang tebal, yang membuatnya cukup tahan untuk diangkut. Konsentrasi air dalam buah, dalam kebanyakan varietas komersial, bervariasi dari 70% hingga 92%, yang tentu saja tergantung pada kelembaban yang ada dan kondisi pohon. Pohon jeruk dan lemon adalah contoh sempurna dari kasus di mana daun tanaman mengambil air dari buah, ketika kebutuhan air untuk dedaunan tidak dapat dipenuhi melalui sistem akar. Selama bulan-bulan musim panas dan di bawah kondisi rata-rata California Selatan, daun lemon mulai mengambil air dari buah-buahan sekitar pukul 6-7 pagi dan terus melakukannya sampai jam 5-6 sore.</p>
+    </div>
+         <div class="content">
+        <h2>6.Buah Belimbing</h2>
+        <div class="rounded-square">
+            <img src="bing.jpeg" alt="Mango image">
+        </div>
+        <p>Belimbing (Averrhoa carambola) adalah buah tropis yang berbentuk bintang ketika dipotong melintang, sehingga dikenal juga sebagai "starfruit." Buah ini memiliki rasa manis-asam dan kaya akan vitamin C, serat, serta antioksidan.</p>
+
+<p>Manfaat buah belimbing antara lain:</p>
+
+<li>1. Meningkatkan daya tahan tubuh berkat kandungan vitamin C yang tinggi.</li>
+
+
+<li>2. Melancarkan pencernaan karena seratnya membantu memperbaiki sistem pencernaan.</li>
+
+
+<li>3. Mendukung kesehatan kulit dengan antioksidan yang membantu melawan radikal bebas.</li>
+
+
+<li>4. Menurunkan risiko penyakit jantung karena dapat membantu mengontrol kadar kolesterol.</li>
+
+
+<li>5. Membantu menurunkan berat badan karena rendah kalori dan mengenyangkan.</li>
+
+
+
+<p>Namun, bagi penderita gangguan ginjal, konsumsinya perlu dihindari karena mengandung asam oksalat yang dapat memperparah kondisi ginjal.</p>
+</div>
+         <div class="content">
+        <h2>7.Buah Naga</h2>
+        <div class="rounded-square">
+            <img src="naga.jpeg" alt="Mango image">
+        </div>
+        <p>Buah naga merah banyak disukai karena memiliki rasa yang manis, kandungan air yang tinggi, serta tekstur yang lembut. Karakteristik inilah yang membuat buah naga merah kerap diolah menjadi beragam makanan penutup, seperti smoothies, jus, atau es buah.</p>
+ <p>Kandungan Nutrisi Buah Naga Merah
+Dalam 1 buah naga merah dengan berat sekitar 300 gram, terkandung 213 kalori dan beragam nutrisi berikut ini:</p>
+<li>10 gram serat</li>
+<li>5 gram protein</li>
+<li>39 miligram kalsium</li>
+<li>42 miligram fosfor</li>
+<li>1,2 miligram zat besi</li>
+<li>384 miligram kalium</li>
+<li>3 miligram vitamin C</li>
+</div>
+         <div class="content">
+        <h2>8.Buah Nangka</h2>
+        <div class="rounded-square">
+            <img src="nang.jpeg" alt="Mango image">
+        </div>
+        <div>
+<p>Nangka adalah buah tropis yang berasal dari pohon nangka (Artocarpus heterophyllus), yang umumnya tumbuh di daerah dengan iklim hangat, seperti Asia Tenggara, India, dan Brasil. Buah ini dikenal dengan ukurannya yang besar dan kulit berduri, serta daging buah yang berwarna kuning cerah dan memiliki aroma manis khas.</p>
+
+<h2 style="color:black">Berikut adalah beberapa manfaat kesehatan dari buah nangka:</h2>
+
+<li>1. Sumber Nutrisi: Nangka kaya akan vitamin C, vitamin A, dan vitamin B kompleks. Selain itu, mengandung mineral seperti kalium, magnesium, dan zat besi, yang penting untuk menjaga kesehatan tubuh.</li>
+<li>2. Meningkatkan Sistem Kekebalan Tubuh: Kandungan vitamin C pada nangka berperan sebagai antioksidan, membantu memperkuat sistem kekebalan tubuh dengan melawan radikal bebas dan mengurangi risiko infeksi.</li>
+<li>3. Menjaga Kesehatan Pencernaan: Serat dalam nangka bermanfaat untuk melancarkan sistem pencernaan dan mencegah masalah pencernaan seperti sembelit.</li>
+<li>4. Menurunkan Risiko Penyakit Jantung: Kandungan potasium dalam nangka membantu menurunkan tekanan darah, yang penting untuk menjaga kesehatan jantung dan mencegah risiko penyakit kardiovaskular.</li>
+<li>5. Menjaga Kesehatan Kulit dan Mata: Vitamin A dalam nangka membantu menjaga kesehatan kulit dan mata, serta mencegah kerusakan yang disebabkan oleh radikal bebas.</li>
+<li>6. Meningkatkan Energi: Nangka mengandung karbohidrat yang cukup tinggi dan gula alami, sehingga dapat memberikan energi instan dan menjadi pilihan yang baik untuk pemulihan energi setelah aktivitas fisik.</li>
+<li>7. Potensi Efek Antikanker: Beberapa senyawa fitonutrien dan antioksidan dalam nangka dipercaya memiliki sifat antikanker yang dapat membantu mencegah pertumbuhan sel kanker, meski penelitian lebih lanjut masih diperlukan.</li>
+<p>Buah nangka bisa dimakan langsung, diolah menjadi jus, dikeringkan, atau dimasak dalam berbagai hidangan. Selain itu, biji nangka juga dapat dimasak dan dimakan karena mengandung nutrisi yang bermanfaat bagi tubuh.</p>
+</div>
+ <div class="content">
+        <h2>9.Buah Rambutan</h2>
+        <div class="rounded-square">
+            <img src="tan.jpeg" alt="Mango image">
+        </div>
+        </div>
+    <div>
+    <p> Rambutan adalah buah tropis yang berasal dari pohon Nephelium lappaceum. Buah ini dikenal dengan bentuknya yang kecil, kulitnya yang berwarna merah atau kuning, dan permukaan kulit yang berbulu. Nama "rambutan" sendiri berasal dari kata "rambut" karena buah ini memiliki duri lembut yang menyerupai rambut di kulitnya. Daging buahnya berwarna putih atau transparan, berair, dan rasanya manis dengan sedikit asam.</p>
+
+<b>Berikut adalah beberapa manfaat kesehatan dari buah rambutan:</b>
+
+<li>1. Sumber Vitamin C: Rambutan kaya akan vitamin C, yang penting untuk meningkatkan daya tahan tubuh, membantu penyerapan zat besi, serta berperan sebagai antioksidan yang melindungi sel tubuh dari kerusakan akibat radikal bebas.</li>
+<li>2. Mengandung Zat Besi: Buah ini mengandung zat besi yang diperlukan untuk mencegah anemia, karena zat besi membantu produksi hemoglobin dalam darah.</li>
+<li>3. Menjaga Kesehatan Pencernaan: Kandungan serat pada rambutan bermanfaat untuk kesehatan pencernaan, membantu mencegah sembelit, dan menjaga kesehatan usus.</li>
+<li>4. Mengandung Antioksidan: Rambutan mengandung berbagai antioksidan seperti flavonoid, yang memiliki efek antiinflamasi dan dipercaya dapat mengurangi risiko penyakit kronis.</li>
+<li>5. Mendukung Kesehatan Kulit: Vitamin C dalam rambutan membantu produksi kolagen, yang penting untuk menjaga elastisitas dan kelembaban kulit, sehingga kulit tampak lebih sehat dan cerah.</li>
+<li>6. Mendukung Penurunan Berat Badan: Rambutan rendah kalori tetapi kaya serat dan air, yang dapat membantu memberikan rasa kenyang lebih lama, sehingga cocok untuk dikonsumsi bagi mereka yang ingin menjaga atau menurunkan berat badan.</li>
+<li>7. Membantu Pengaturan Gula Darah: Rambutan mengandung senyawa fenolik yang dipercaya dapat membantu mengatur kadar gula darah, meskipun penelitian lebih lanjut masih diperlukan untuk memahami efeknya secara mendalam.</li>
+<li>8. Mendukung Kesehatan Tulang: Rambutan mengandung kalsium, fosfor, dan zat besi yang penting untuk kesehatan tulang, serta mencegah risiko osteoporosis di kemudian hari.</li>
+
+<p>Buah rambutan bisa dimakan langsung atau dijadikan campuran dalam salad buah. Selain itu, bijinya juga memiliki manfaat dan sering digunakan dalam obat tradisional, meskipun perlu diolah dengan benar karena biji mentahnya mengandung senyawa beracun.</p>
+</div>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>

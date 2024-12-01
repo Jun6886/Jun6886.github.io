@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projek PKL.com</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body {
+       font-family:'Courier New', Courier, monospace;', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #222;
+            color: #fff;
+        }
+                /* Gaya untuk sampul */
+        .sampul {
+            width: 100%;
+            height: 190px;
+            background-color: black;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        /* Teks pada sampul */
+        .sampul h1 {
+            font-size: 2.5em;
+            margin: 0;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.6); /* Efek transparansi pada teks */
+        }
+        
+        .date {
+            font-size: 2em;
+            color: #FF6347; /* Warna teks */
+            background: linear-gradient(45deg, #FF6347, #FF69B4, #FFD700, #7FFFD4);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: colorShift 3s infinite alternate;
+        }
+        @keyframes colorShift {
+            0% {
+                color: #FF6347;
+            }
+            25% {
+                color: #FF69B4;
+            }
+            50% {
+                color: #FFD700;
+            }
+            75% {
+                color: #7FFFD4;
+            }
+            100% {
+                color: #FF6347;
+            }
+        }
+      header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #444;
+        }
+        .clock {
+            font-size: 2em;
+            color: #fff;
+            text-shadow: 0 0 20px #f00, 0 0 40px #0f0, 0 0 60px #00f;
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 20px #f00, 0 0 40px #f00, 0 0 60px #f00;
+            }
+            33% {
+                text-shadow: 0 0 20px #0f0, 0 0 40px #0f0, 0 0 60px #0f0;
+            }
+            66% {
+                text-shadow: 0 0 20px #00f, 0 0 40px #00f, 0 0 60px #00f;
+            }
+            100% {
+                text-shadow: 0 0 20px #ff0, 0 0 40px #ff0, 0 0 60px #ff0;
+            }
+        }
+            .menu-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #f39c12; /* Fruit-inspired orange background */
+            border: 2px solid #e67e22; /* Darker orange border */
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            background-color: #e74c3c; /* Tomato color */
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-icon div {
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.4s;
+        }
+
+        .nav-menu {
+            display: none; /* Hidden by default */
+            background: url('https://example.com/fruit-pattern.jpg') no-repeat center; /* Background with fruit pattern */
+            background-size: cover;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            width: 200px;
+            z-index: 1;
+            border: 2px solid #e67e22;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 10px;
+            color: #333;
+            text-decoration: none;
+            background-color: rgba(255, 255, 255, 0.9);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            background-color: #e67e22; /* Orange color on hover */
+            color: white;
+        }
+
+        .menu-container.active .nav-menu {
+            display: block;
+        }
+
+        aside nav {
+            display: flex;
+            justify-content: center;  /* Center the images horizontally */
+            align-items: center;      /* Center the images vertically */
+            gap: 10px;                /* Add space between the images */
+            background-color: black;
+        }
+
+        /* Apply styles to the images */
+        aside nav a img {
+            width: 48px;              /* Set the size of the images */
+            height: 50px;
+            border-radius: 50%;        /* Make the images circular */
+            position: relative;        /* Allow positioning for the layered borders */
+            box-shadow: 0 0 0 5px white, 0 0 0 10px 
+            red, 0 0 0 5px  ;  /* Circular layered borders */
+        }
+
+        .highlight-text {
+            color: red;
+            font-weight: bold;
+        }
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, white,white); /* Light gradient background */
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1.5em 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            background: linear-gradient(to right, red,yellow);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            background-color: #f3f3f3;
+        }
+
+        .search-box {
+            display: flex;
+            border: 2px solid red;
+            border-radius: 25px;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .search-box input[type="text"] {
+            border: none;
+            outline: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .search-box button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .search-box button:hover {
+            background-color: #3367d6;
+        }
+
+        
+
+        article {
+            text-align: left;
+            margin: 20px;
+        }
+        marquee {
+          text-align: center;
+            margin: 20px;
+        }
+        table {
+            background-color: #fff;
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        table th, table td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .social-icons img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+        }
+
+        h1, h2, h4, p {
+            margin: 10px 0;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        h4 {
+            color: #555;
+        }
+
+        .highlight-text {
+            color: red;
+            font-weight: bold;
+        }
+                .slider {
+            width: 1500px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+            border: 2px solid #ccc;
+        }
+
+        /* Gambar di dalam slider */
+        .slides {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            animation: slide 10s infinite;
+        }
+
+        .slides img {
+            width: 500px; /* Harus sama dengan lebar slider */
+            height: 300px; /* Harus sama dengan tinggi slider */
+        }
+
+        /* Keyframes untuk animasi slide */
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            33% { transform: translateX(-100%); }
+            66% { transform: translateX(-200%); }
+            100% { transform: translateX(0); }
+        }
+        
+    </style>
+</head>
+
+<body>
+   <header>
+         <div class="date" id="date"></div>
+
+    <script>
+        const dateElement = document.getElementById('date');
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        const today = new Date().toLocaleDateString('id-ID', options);
+        dateElement.textContent = today;
+    </script>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('digital-clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); // Panggil sekali untuk menampilkan waktu segera
+    </script>
+    <section class="sampul">
+        <h1 style="color:yellow">Selamat Datang Di website Kami</h1>
+    </section>
+    </header>
+    
+
+        <aside>
+        <nav>
+            <a href="Login.html"><img src="rmh2.jpg" alt="Home"></a>
+            <a href="Contactwe.html"><img src="p.png" alt="Contact Us"></a>
+            <a href="Aboutwe.html"><img src="pil.jpg" alt="About Us"></a>
+            <a href="kegiatan kami.html"><img src="Set.png" alt="Our Activities"></a>
+            <a href="Barang².html"><img src="nj.jpg" alt="Products"></a>
+              <a href="Asikin.html"><img src="er.jpg" alt="Products"></a>
+        </nav>
+    </aside>
+    <div class="menu-container" id="menuContainer">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-menu">
+            <a href="index.html" style="color:#008080">lapor📢</a>
+            <a href="J.html" style="color:#008080">Kesukaan Film</a>
+            <a href="Hu.html" style="color:yellow"> buah buahan🍓</a>
+            <a href="Nimal.html" style="color:blue">World Animal</a>
+            <a href="kegiatan kami.html" style="color:blue">Our Activities</a>
+             <a href="Benua.html" style="color:blue">Benua Flora and Fauna🌏🦓🌵</a>
+              <a href="IPA.html" style="color:blue">GALAXY</a>
+             
+        </div>
+    </div>
+
+<div class="search-container">
+    <form class="search-box" action="https://www.google.com/search" method="GET" target="_blank">
+        <input type="text" name="q" placeholder="Search on Google...">
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<style>
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        background-color: #f3f3f3;
+    }
+
+    .search-box {
+        display: flex;
+        border: 3px solid transparent; /* Set border to transparent initially */
+        border-radius: 25px;
+        padding: 5px;
+        background: linear-gradient(white, white) padding-box, /* Inner white background */
+                    linear-gradient(to right, red, orange, yellow, green, cyan, blue, violet) border-box; /* Gradient border */
+    }
+
+    .search-box input[type="text"] {
+        border: none;
+        outline: none;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 25px;
+        width: 200px;
+        background-color: #fff;
+    }
+
+    .search-box button {
+        background: linear-gradient(to right, red,gold); /* Gradient background for button */
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .search-box button:hover {
+        background: linear-gradient(to right, violet, blue, cyan, green, yellow, orange, red); /* Inverted gradient on hover */
+    }
+          .rounded-link {
+      display: inline-block;
+      text-align: center;
+      width: 200px; /* Sesuaikan ukuran */
+      text-decoration: none;
+      color: black;
+      font-family: Arial, sans-serif;
+    }
+
+    .rounded-link img {
+      width: 100%;
+      height: auto;
+      border-radius: 15px; /* Membuat sudut melengkung */
+      display: block;
+      margin-bottom: 8px; /* Jarak antara gambar dan teks */
+    }
+            .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+            gap: 20px; /* Jarak antar gambar */
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Mengatur gaya untuk setiap gambar dan teks */
+        .gallery figure {
+            margin: 0;
+            text-align: center; /* Mengatur teks berada di tengah */
+        }
+
+        /* Mengatur ukuran gambar */
+        .gallery img {
+            width: 100%; /* Lebar gambar mengikuti lebar kolom */
+            height: 150px; /* Tinggi gambar */
+            object-fit: cover; /* Mengisi area gambar sambil menjaga proporsi */
+            border-radius: 5px; /* Membuat sudut gambar melengkung */
+        }
+
+        /* Gaya untuk teks di bawah gambar */
+        .gallery figcaption {
+            margin-top: 8px;
+            font-size: 14px;
+            color: #555;
+        }
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; /* Membuat efek 3D */
+    margin: auto;
+  }
+
+  /* Card */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+    animation: spin 5s linear infinite; /* Animasi rotasi tanpa henti */
+  }
+
+  /* Sisi depan dan belakang kartu */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: white;
+  }
+
+  /* Tampilan sisi depan */
+  .flip-card-front {
+    background-color: #333;
+  }
+
+  /* Tampilan sisi belakang */
+  .flip-card-back {
+    background-color: #4CAF50;
+    transform: rotateY(180deg);
+  }
+
+  /* Menyelaraskan gambar */
+  .flip-card-front img, .flip-card-back img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover; /* Agar gambar sesuai ukuran kartu */
+  }
+
+  /* Animasi rotasi */
+  @keyframes spin {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+  }
+          footer {
+            background-color:black;
+            padding: 0px;
+            overflow: hidden;
+            position: relative;
+        }
+        .swipeable-footer {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+        .swipeable-footer img {
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+            object-fit: cover;
+            cursor: pointer;
+            scroll-snap-align: center;
+            transition: transform 0.3s ease;
+        }
+        .swipeable-footer img:hover {
+            transform: scale(1.1);
+        }
+        .swipeable-footer a {
+            display: block;
+        }
+        footer p {
+            text-align: center;
+            color: #fff;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+</style>
+
+
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <!-- Gambar sisi depan -->
+      <img src="tanga.jpeg" alt="Gambar Depan">
+    </div>
+    <div class="flip-card-back">
+      <!-- Gambar sisi belakang -->
+      <img src="jo.jpg" alt="Gambar Belakang">
+    </div>
+  </div>
+</div>
+
+<div style="text-align: center; margin: 20px 0;">
+    <img src="Jo.jpg" width="150" height="150" style="border-radius: 50%;" />
+</div>
+
+ <marquee style="color:black"><h1>Menu Utama Website</h1></marquee>
+ <article>
+<h4>Selamat Datang di Website Kami</h4>
+<p style="color:black";>
+    Dengan penuh rasa syukur, kami mempersembahkan hasil kerja keras kami dalam bentuk website ini. 
+    Kami adalah tim yang terdiri dari individu-individu kreatif dan berkomitmen, yang memiliki tujuan 
+    untuk menciptakan karya yang tidak hanya fungsional tetapi juga estetik.
+</p>
+<h1 style="color:black">Rudy Advertising Tebas</h1>
+<p style="color:black">Rudy Advertising Tebas adalah sebuah toko yang bergerak di bidang jasa periklanan dan promosi di daerah Tebas. Berdiri sejak lebih dari 10 tahun yang lalu, Rudy Advertising menjadi salah satu pilihan utama bagi masyarakat dan bisnis setempat dalam memenuhi kebutuhan promosi. Mulai dari spanduk, baliho, cetak stiker, hingga desain dan pemasangan neon box, Rudy Advertising melayani dengan kualitas terbaik dan harga yang bersaing.</p>
+<p style="color:black">Awalnya, toko ini hanya melayani cetak spanduk dan baliho sederhana. Namun, seiring dengan bertambahnya pengalaman dan perkembangan teknologi, Rudy Advertising memperluas layanan dan menawarkan berbagai pilihan media promosi yang lebih kreatif. Dengan adanya mesin-mesin cetak modern, toko ini mampu memproduksi materi promosi dengan kualitas yang tajam dan tahan lama. Selain itu, mereka juga memiliki tim desain yang kreatif dan berpengalaman yang dapat membantu klien dalam membuat desain yang menarik dan sesuai kebutuhan.</p>
+<p style="color:black">Rudy Advertising terkenal dengan pelayanan ramah dan cepat. Toko ini sering mendapatkan proyek dari bisnis lokal seperti restoran, toko pakaian, dan event organizer yang ingin memperkenalkan produk atau acara mereka ke masyarakat luas. Klien-klien merasa puas karena tidak hanya kualitas produk yang terjamin, tetapi juga waktu pengerjaan yang sesuai dengan jadwal mereka.</p>
+<p style="color:black">Di lingkungan kerja, Rudy Advertising menciptakan suasana kekeluargaan. Setiap pegawai memiliki peran penting, dan kolaborasi tim sangat diutamakan. Para magang yang datang ke sini akan mendapatkan pengalaman yang berharga, baik dalam hal teknis seperti proses produksi cetak, maupun dalam hal pelayanan dan komunikasi dengan klien. Para magang juga dilibatkan dalam pembuatan desain dan ikut serta dalam proses pemasangan langsung di lapangan.</p>
+
+<p style="color:black">Dengan reputasi yang baik dan komitmen terhadap kualitas, Rudy Advertising Tebas terus berkembang dan siap menghadapi tantangan bisnis periklanan yang semakin dinamis.</p>
+<p style="color:black";>
+    Website ini adalah wujud nyata dari semangat kolaborasi, dedikasi, dan inovasi. Dalam setiap elemen yang ada, 
+    kami berusaha untuk menghadirkan sesuatu yang tidak hanya memberikan informasi, tetapi juga menghadirkan 
+    pengalaman yang inspiratif.
+</p>
+
+<p style="color:black";>
+    Terima kasih telah meluangkan waktu untuk mengunjungi karya kami. Kami berharap apa yang kami sajikan bisa 
+    menjadi cerminan dari visi, kreativitas, dan profesionalisme yang kami junjung tinggi.
+</p>
+
+<p style="color:black";>
+    Di website ini kami memperkenalkan sebuah perusahaan percetakan terbaik, tempat ini menyediakan berbagai produk, seperti:
+    <b style="color: green;">
+        Baliho, Spanduk, Banner, Print Digital, Nota Custom, Plakat Mug, Undangan, ID Card, Menu Sticker, Decal, 
+        Cutting Sticker, X-Banner, Roll Banner, Neon Box, Pembatas Meja Akrilik, Ganci, Stempel, Kotak Saran, 
+        Blanko Kantor, Yasin, Pin, jilid buku hardcover dan softcover, dan lainnya.
+    </b>
+</p>
+<b style="color:black">1.Print Digital</b>
+<p style="color:black"> Print digital adalah metode pencetakan yang menggunakan teknologi digital, seperti printer inkjet atau laser, untuk menghasilkan gambar atau teks secara langsung dari file digital ke media cetak. Berbeda dengan metode pencetakan tradisional (seperti offset), print digital tidak memerlukan plat cetak dan memungkinkan pencetakan langsung tanpa proses yang rumit.</p>
+<b style="color:black">2.Nota Custom</b>
+<p style="color:black">Nota custom adalah nota yang dibuat dengan desain khusus atau sesuai permintaan pelanggan. Biasanya, nota ini dipersonalisasi untuk mencerminkan identitas bisnis atau memenuhi kebutuhan spesifik pengguna. Nota custom sering digunakan oleh perusahaan untuk branding dan profesionalisme, dengan elemen yang bisa disesuaikan.</p>
+<b style="color:black">3.Plakat Mug</b>
+<p style="color:black">Plakat mug adalah mug atau cangkir yang didesain khusus dengan elemen dekoratif, seperti tulisan, gambar, atau logo, sehingga bisa dijadikan sebagai kenang-kenangan atau hadiah penghargaan. Biasanya, mug ini digunakan dalam acara perusahaan, pernikahan, atau seminar untuk memberikan kesan personal atau branding kepada penerima. Plakat mug dapat dipersonalisasi dengan berbagai desain dan sering dicetak menggunakan teknik sublimasi agar gambar atau tulisan lebih tahan lama.</p>
+<b style="color:black">4.Undangan</b>
+<p style="color:black">Undangan adalah media untuk memberitahukan dan mengajak seseorang agar hadir dalam suatu acara atau kegiatan tertentu. Kegunaan utama undangan antara lain:</p>
+
+<p style="color:black">1. Menginformasikan Acara: Undangan memberi informasi detail tentang acara, seperti waktu, tempat, jenis acara, dan tema acara. Hal ini memudahkan tamu untuk mengetahui detail acara dengan jelas.</p>
+
+
+<p style="color:black">2. Memastikan Kehadiran: Dengan mengirim undangan, penyelenggara bisa mendapatkan konfirmasi kehadiran sehingga dapat memperkirakan jumlah tamu yang hadir. Hal ini penting untuk mempersiapkan segala sesuatu yang diperlukan, seperti konsumsi dan tempat.</p>
+
+
+<p style="color:black">3. Menunjukkan Formalitas dan Kesopanan: Untuk acara formal, undangan menunjukkan rasa hormat dan kesopanan kepada calon tamu. Dengan mengundang secara resmi, tamu merasa dihargai dan diinginkan kehadirannya.</p>
+
+
+<p style="color:black">4. Menciptakan Kesan Pertama: Desain undangan bisa mencerminkan tema atau konsep acara dan menciptakan kesan pertama yang baik. Untuk acara pernikahan atau pertemuan bisnis, misalnya, undangan yang menarik dapat membuat tamu lebih antusias.</p>
+
+
+<p style="color:black">5. Memudahkan Koordinasi: Undangan biasanya dilengkapi dengan kontak atau alamat untuk memudahkan koordinasi atau jika tamu membutuhkan informasi tambahan.</p>
+
+
+
+<p style="color:black">Undangan bisa berupa fisik atau digital, dan sekarang ini undangan digital menjadi populer karena lebih praktis, hemat, dan ramah lingkungan.</p>
+<b style="color:black">5.Id Card</b>
+<p style="color:black">ID Card (Kartu Identitas) adalah kartu yang berfungsi sebagai tanda pengenal seseorang. Biasanya, ID Card berisi informasi penting seperti nama, foto, nomor identitas, dan jabatan atau afiliasi seseorang dalam suatu organisasi atau perusahaan. ID Card digunakan untuk memverifikasi identitas pemiliknya dan memudahkan akses atau pengenalan dalam lingkungan tertentu, seperti kantor, sekolah, atau acara.
+
+Dalam konteks profesional, ID Card sering kali dilengkapi dengan fitur keamanan tambahan seperti kode batang (barcode), chip, atau teknologi RFID untuk otentikasi yang lebih canggih.</p>
+<b style="color:black">7.Menu Sticker</b>
+<p style="color:black"> Menu stiker adalah fitur yang menyediakan kumpulan gambar atau animasi kecil untuk mengekspresikan emosi atau reaksi dalam percakapan.
+
+Kegunaan: Stiker membantu menambah ekspresi dalam obrolan, menghemat waktu mengetik, membuat percakapan lebih menarik, dan mempermudah komunikasi tanpa bahasa.</p>
+<b style="color:black">8.Decal</b>
+<p style="color:black"> Decal (atau decalcomania) adalah stiker atau gambar yang dapat dipindahkan ke permukaan lain melalui teknik penempelan, sering kali dengan menggunakan air atau tekanan. Decal sering digunakan untuk dekorasi, branding, dan personalisasi, seperti pada kendaraan, peralatan elektronik, atau dinding rumah. Keunggulannya adalah mudah ditempel dan dilepas tanpa merusak permukaan.</p>
+<b style="color:black">9.Cutting Sticker</b>
+<p style="color:black">Cutting sticker adalah stiker yang dipotong mengikuti bentuk desain tanpa latar belakang tambahan, biasanya menggunakan mesin pemotong khusus. Cutting sticker umum digunakan untuk dekorasi kendaraan, kaca toko, dan branding pada produk karena tahan lama dan memiliki tampilan yang bersih.</p>
+<b style="color:black">10.x-banner</b>
+<p style="color:black">
+X-Banner adalah jenis media promosi yang menggunakan banner (spanduk) yang didirikan dengan rangka berbentuk "X." X-Banner mudah dipindahkan, ringan, dan cocok untuk promosi acara atau produk di dalam ruangan seperti pameran atau toko.</p>
+<p><b style="color:red";>Salam Hangat, Anisa, Asikin, Ida, dan Juniardi</b></p>
+    </article>
+
+<div style="max-width: 600px; margin: 5em auto; border: 2px solid #333; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); overflow: hidden;">
+    <table border="1" width="100%" style="border-collapse: collapse; background-color: #f4f4f4;">
+        <thead>
+            <tr style="background-color: #333; color: gold;">
+                <th style="padding: 10px; text-align: left;">Perangkat Lunak</th>
+                <th style="padding: 10px; text-align: left;">Hasil dari Perangkat Lunak</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 15px; border: 1px solid #ddd;">
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li style="color:black";>Adobe Photoshop</li>
+                        <li style="color:black";>CorelDraw</li>
+                    </ul>
+                </td>
+                <td style="padding: 15px; border: 1px solid #ddd;">
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li style ="color:black";>Spanduk/Baliho</li>
+                        <li style="color:black";>Stempel, ID Card, Stiker</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div style="max-width: 600px; margin: 5em auto; border: 2px solid #333; border-radius: 10px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); overflow: hidden;">
+    <table border="1" width="100%" style="border-collapse: collapse; background-color: #f4f4f4;">
+        <thead>
+            <tr style="background-color: #333; color: gold;">
+                <th style="padding: 10px; text-align: left;">Perangkat Keras</th>
+                <th style="padding: 10px; text-align: left;">Hasil dari Perangkat Keras</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="padding: 15px; border: 1px solid #ddd;">
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li  style="color:black"; >Adobe Photoshop</li>
+                        <li  style="color:black";>CorelDraw</li>
+                    </ul>
+                </td>
+                <td style="padding: 15px; border: 1px solid #ddd;">
+                    <ul style="margin: 0; padding-left: 20px;">
+                        <li style ="color:black">Spanduk/Baliho</li>
+                        <li style ="color:black">Stempel, ID Card, Stiker</li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+        <h1 style="color: black">©untuk lebih selengkap nya klik ikon yang berada diatas untuk lebih mendalami.</h1>
+
+    
+
+    <script>
+        // Function to toggle (open/close) menu
+        function toggleMenu() {
+            var menuContainer = document.getElementById('menuContainer');
+            menuContainer.classList.toggle('active');
+        }
+    </script>
+        <div class="slider">
+        <div class="slides">
+            <img src="ry.jpeg" alt="Slide 1">
+            <img src="hbki.jpeg" alt="Slide 2">
+            <img src="apel.jpeg" alt="Slide 3">
+             <img src="git.jpeg" alt="Slide 3">
+              <img src="fiz.jpeg" alt="Slide 3">
+              <img src="pai.jpg" alt="Slide 3">
+        </div>
+    </div>
+        <footer>
+    <div class="gallery">
+        <figure>
+            <a href="Benua.html" target="_blank">
+                <img src="nua.png" alt="Gambar 3">
+            </a>
+ <b>Benua Information</b>
+        </figure>
+        <figure>
+            <a href="Nimal.html" target="_blank">
+                <img src="pai.jpg" alt="Gambar 3">
+            </a>
+ <b>Animal Information</b>
+        </figure>
+        <figure>
+            <a href="Hu.html" target="_blank">
+                <img src="apel.jpeg" alt="Gambar 3">
+            </a>
+ <b>Buah Enak</b>
+        </figure>
+        <figure>
+            <a href="j.html" target="_blank">
+                <img src="bil.jpeg" alt="Gambar 4">
+            </a>
+            <b>Kamen rider info</b>
+        </figure>
+    </div>
+        <footer>
+        <div class="swipeable-footer">
+            <a href="https://example1.com" target="_blank"><img src="bil.jpeg" alt="Image 1"></a>
+            <a href="https://example2.com" target="_blank"><img src="https://via.placeholder.com/150" alt="Image 2"></a>
+            <a href="https://example3.com" target="_blank"><img src="https://via.placeholder.com/150" alt="Image 3"></a>
+            <a href="https://example4.com" target="_blank"><img src="https://via.placeholder.com/150" alt="Image 4"></a>
+            <a href="https://example5.com" target="_blank"><img src="https://via.placeholder.com/150" alt="Image 5"></a>
+        </div>
+    </footer>
+    <div style="text-align: center;">
+    <h1 style="color: red;">follow us😄</h1>
+</div>
+        <div class="social-icons">
+            <a href="https://wa.me/+6281349012751" target="_blank"><img src="yt.png" alt="WhatsApp"></a>
+            <a href="https://www.tiktok.com/@juniarxy_xd" target="_blank"><img src="tt.jpeg" alt="TikTok"></a>
+            <a href="https://www.youtube.com/@jun697" target="_blank"><img src="ytbn.jpeg" alt="YouTube"></a>
+            <a href="https://www.instagram.com/yourusername" target="_blank"><img src="ita.jpeg" alt="Instagram"></a>
+            <a href="https://www.facebook.com/Kin Ray" target="_blank"><img src="fc.jpeg" alt="Facebook"></a>
+        </div>
+        <p>&copy; copy right 2024 by Raykin.</p>
+        
+    </footer>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Mewah dengan Efek Cahaya</title>
+<style>
+  /* Pengaturan halaman */
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Kontainer CV */
+  .cv-container {
+    width: 400px;
+    padding: 30px;
+    background: linear-gradient(145deg, #222, #333);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative;
+  }
+
+  /* Efek lingkaran cahaya berputar di latar belakang */
+  .background-glow {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #ff007f, #ff7700, #00d4ff, #ff007f);
+    animation: spin 8s linear infinite;
+    z-index: 0;
+    filter: blur(20px);
+  }
+
+  /* Lingkaran foto profil dengan efek cahaya */
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 0, 127, 0.3);
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  /* Gambar di dalam lingkaran profil */
+  .profile-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Nama dan Jabatan */
+  h1 {
+    margin-top: 20px;
+    font-size: 28px;
+    letter-spacing: 1.5px;
+  }
+
+  h2 {
+    font-size: 18px;
+    color: #ff007f;
+    margin-bottom: 20px;
+  }
+
+  /* Informasi kontak */
+  .contact-info {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+  .contact-info p {
+    margin: 10px 0;
+  }
+
+  /* Tombol dengan efek cahaya */
+  .contact-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff007f;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 10px #ff007f, 0 0 20px #ff007f;
+  }
+
+  .contact-button:hover {
+    box-shadow: 0 0 20px #ff007f, 0 0 30px #ff007f, 0 0 40px #ff007f;
+  }
+
+  /* Efek animasi untuk rotasi dan cahaya */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 20px rgba(255, 0, 127, 0.5), 0 0 40px rgba(255, 0, 127, 0.3);
+    }
+    to {
+      box-shadow: 0 0 40px rgba(255, 0, 127, 0.7), 0 0 60px rgba(255, 0, 127, 0.5);
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="cv-container">
+  <!-- Efek lingkaran cahaya berputar -->
+  <div class="background-glow"></div>
+
+  <!-- Foto profil dalam lingkaran dengan efek cahaya -->
+  <div class="profile-picture">
+    <img src="https://via.placeholder.com/150" alt="Foto Profil">
+  </div>
+
+  <!-- Nama dan Jabatan -->
+  <h1>Nama Anda</h1>
+  <h2>Jabatan atau Profesi</h2>
+
+  <!-- Informasi Kontak -->
+  <div class="contact-info">
+    <p>Email: emailanda@example.com</p>
+    <p>Telepon: +62 812-3456-7890</p>
+    <p>Alamat: Jl. Contoh No. 123, Kota</p>
+  </div>
+
+  <!-- Tombol Kontak -->
+  <button class="contact-button">Hubungi Saya</button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Transformers</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            color: #00c3ff;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        /* Container grid styling */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .item {
+            position: relative;
+            overflow: hidden;
+            border: 2px solid #1e90ff;
+            border-radius: 10px;
+            background: linear-gradient(145deg, #333, #1a1a1a);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        /* Metallic glow background */
+        .glow-background {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(0, 51, 153, 0.3);
+            filter: blur(20px);
+            transform: translate(-50%, -50%);
+            animation: rotateGlow 8s linear infinite;
+            pointer-events: none;
+            border-radius: 50%;
+        }
+
+        /* Rotating animation for the background */
+        @keyframes rotateGlow {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        /* Circuit-like lines animation */
+        .circuit-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('circuit-lines.png'); /* Custom circuit image */
+            background-size: cover;
+            opacity: 0.15;
+            animation: rotateCircuit 10s linear infinite;
+        }
+
+        /* Circuit lines rotation animation */
+        @keyframes rotateCircuit {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(-360deg); }
+        }
+
+        .item img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.4s ease;
+        }
+
+        .item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #1e90ff;
+        }
+
+        .item:hover img {
+            transform: scale(1.1);
+        }
+
+        .item p {
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #00c3ff;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.6);
+        }
+    </style>
+</head>
+<body>
+    <h1>Transformers Galeri</h1>
+    <div class="container">
+        <div class="item">
+            <div class="glow-background"></div>
+            <div class="circuit-lines"></div>
+            <img src="tam.jpeg" alt="Gambar 1">
+            <p>Ayam Cemani</p>
+        </div>
+        <div class="item">
+            <div class="glow-background"></div>
+            <div class="circuit-lines"></div>
+            <img src="tra.jpeg" alt="Gambar 2">
+            <p>Ayam Sumatra</p>
+        </div>
+        <div class="item">
+            <div class="glow-background"></div>
+            <div class="circuit-lines"></div>
+            <img src="nai.jpeg" alt="Gambar 3">
+            <p>Ayam Ayunai</p>
+        </div>
+        <div class="item">
+            <div class="glow-background"></div>
+            <div class="circuit-lines"></div>
+            <img src="kung.jpg" alt="Gambar 4">
+            <p>Ayam Tukung</p>
+        </div>
+        <div class="item">
+            <div class="glow-background"></div>
+            <div class="circuit-lines"></div>
+            <img src="bu.jpeg" alt="Gambar 5">
+            <p>Ayam Hutan Kelabu</p>
+        </div>
+        <div class="item">
+            <div class="glow-background"></div>
+            <div class="circuit-lines"></div>
+            <img src="te.jpeg" alt="Gambar 6">
+            <p>Ayam Kate</p>
+        </div>
+                <div class="item">
+            <div class="glow-background"></div>
+            <div class="circuit-lines"></div>
+            <img src="jau.jpeg" alt="Gambar 7">
+            <p>Ayam Kate</p>
+        </div>
+        
+    </div>
+</body>
+</html>

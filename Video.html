@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aplikasi Arsip Surat</title>
+  <style>
+    /* Reset dan Pengaturan Dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(120deg, #4a90e2, #9013fe);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Kotak Formulir */
+    .form-container {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      padding: 20px;
+      width: 80%;
+      max-width: 500px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    label {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    input, textarea {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    button {
+      background: linear-gradient(90deg, #ff8c00, #ff0080);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(255, 0, 128, 0.4);
+    }
+
+    /* Daftar Arsip */
+    .list-container {
+      margin-top: 30px;
+      width: 80%;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .list-item {
+      background: rgba(255, 255, 255, 0.2);
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .list-item h3 {
+      margin: 0;
+    }
+
+    .delete-btn {
+      background: #ff4d4d;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .delete-btn:hover {
+      background: #ff1a1a;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Aplikasi Arsip Surat</h1>
+
+  <!-- Form Input Surat -->
+  <div class="form-container">
+    <label for="judul">Judul Surat</label>
+    <input type="text" id="judul" placeholder="Masukkan Judul Surat">
+
+    <label for="deskripsi">Deskripsi Surat</label>
+    <textarea id="deskripsi" placeholder="Masukkan Deskripsi Surat" rows="4"></textarea>
+
+    <button onclick="tambahArsip()">Tambah Arsip</button>
+  </div>
+
+  <!-- Daftar Arsip Surat -->
+  <div class="list-container" id="listContainer">
+    <!-- Item Arsip akan ditambahkan di sini -->
+  </div>
+
+  <script>
+    // Fungsi untuk menambah arsip ke daftar
+    function tambahArsip() {
+      const judul = document.getElementById('judul').value.trim();
+      const deskripsi = document.getElementById('deskripsi').value.trim();
+
+      if (!judul || !deskripsi) {
+        alert('Mohon isi semua data!');
+        return;
+      }
+
+      // Membuat elemen baru untuk arsip
+      const listContainer = document.getElementById('listContainer');
+      const listItem = document.createElement('div');
+      listItem.classList.add('list-item');
+
+      listItem.innerHTML = `
+        <div>
+          <h3>${judul}</h3>
+          <p>${deskripsi}</p>
+        </div>
+        <button class="delete-btn" onclick="hapusArsip(this)">Hapus</button>
+      `;
+
+      listContainer.appendChild(listItem);
+
+      // Reset input setelah menambahkan arsip
+      document.getElementById('judul').value = '';
+      document.getElementById('deskripsi').value = '';
+    }
+
+    // Fungsi untuk menghapus arsip
+    function hapusArsip(button) {
+      const listItem = button.parentElement;
+      listItem.remove();
+    }
+  </script>
+</body>
+</html>
