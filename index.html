@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>kalkulator</title>
+	<style type="text/css">
+		.container{
+			display: flex;
+			height: 100vh;
+			width: 100vw;
+			justify-content: center;
+			align-items: center;
+		}
+		body{
+			background-image: repeating-linear-gradient(to top, blue,cyan);
+		}
+		fieldset{
+			background-image: repeating-linear-gradient(to top, black,white);
+			border-radius: 20px;
+		}
+		#display{
+			height: 30px;
+			width: 200px;
+			text-align: right;
+			font-size: 30px;
+		}
+		input[type="button"]{
+			height: 40px;
+			width: 40px;
+			margin: 4px;
+			border-radius: 10px;
+			cursor: pointer;
+			font-size: 30px;
+			border-color: gray;
+		}
+		h1{
+			text-align: center;
+		}
+		.equal{
+			background-color: orange;
+		}
+		.clear{
+			background-color: red;
+		}
+		input:hover{
+			background-color: silver;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<fieldset>
+			<h1>Kalkulator</h1>
+			<form name="calculator">
+				<input id="display" type="text" name="display" placeholder="" readonly><br>
+				<input id="clearbutton" type="button" class="clear" value="C" onclick="calculator.display.value = ''">
+				<input id="clearbutton" type="button" class="clear" value="<=" onclick="calculator.display.value = calculator.display.value.slice(0, -1)">
+				<input type="button" value="%" onclick="calculator.display.value += '%'">
+				<br>
+				<input type="button" value="9" onclick="calculator.display.value += '9'">
+				<input type="button" value="8" onclick="calculator.display.value += '8'">
+				<input type="button" value="7" onclick="calculator.display.value += '7'">
+				<input type="button" value="+" onclick="calculator.display.value += '+'">
+				<br>
+				<input type="button" value="6" onclick="calculator.display.value += '6'">
+				<input type="button" value="5" onclick="calculator.display.value += '5'">
+				<input type="button" value="4" onclick="calculator.display.value += '4'">
+				<input type="button" value="-" onclick="calculator.display.value += '-'">
+				<br>
+				<input type="button" value="3" onclick="calculator.display.value += '3'">
+				<input type="button" value="2" onclick="calculator.display.value += '2'">
+				<input type="button" value="1" onclick="calculator.display.value += '1'">
+				<input type="button" value="x" onclick="calculator.display.value += '*'">
+				<br>
+				<input type="button" value="," onclick="calculator.display.value += '.'">
+				<input type="button" value="0" onclick="calculator.display.value += '0'">
+				<input type="button" class="equal" value="=" onclick="hitung()">
+				<input type="button" value="/" onclick="calculator.display.value += '/'">
+				
+
+				<script>
+					function hitung(){
+						try{
+							let ekspresi = document.calculator.display.value;
+
+							if (/[\+\-\*\/]{2,}/.test(ekspresi) || /[\+\-\*\/]$/.test(ekspresi)) {
+							throw "Error";
+						}
+						ekspresi = ekspresi.replace('%','/100');
+						let hasil = eval(ekspresi);
+
+						if (isNaN(hasil) || !isFinite(hasil)) {
+							throw "Error";
+						}
+						document.calculator.display.value = hasil;
+						} catch(e){
+							document.calculator.display.value = "Error";
+						}
+					}
+				</script>
+			</form>
+		</fieldset>
+	</div>
+
+</body>
+</html>
